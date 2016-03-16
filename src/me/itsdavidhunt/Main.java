@@ -13,17 +13,25 @@ public class Main extends PApplet {
     }
 
     public void settings(){
-        fullScreen(); 
+       fullScreen();
+       //size(500,500);
     }
     
     public void setup()
     {
-    	background(0);
     	player=new Player(this);
     }
     
 
     public void draw() {
-        player.render();
+    	background(0);
+        play();
     }    
+    
+    //This method will control all the classes for playing the game
+    public void play()
+    {
+    	player.render();
+    	player.move();
+    }
 }
