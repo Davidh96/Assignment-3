@@ -8,7 +8,7 @@ public class FlareGun extends PApplet {
     Main main;
 
     public PVector pos;
-    ArrayList<Flare> clip=new ArrayList<Flare>();
+
 
     public FlareGun(float x,float y,Main _main)
     {
@@ -24,15 +24,19 @@ public class FlareGun extends PApplet {
 
         if(main.mousePressed)
         {
-            shoot();
+            shoot(main.mouseX,main.mouseY);
         }
     }
 
-    public void shoot()
+    public void shoot(float mX,float mY)
     {
-        Flare flare=new Flare(pos.x,pos.y,main);
-        clip.add(flare);
-        System.out.println(clip.size());
+        if(main.fired) {
+            Flare flare = new Flare(pos.x, pos.y,mX,mY, main);
+            main.clip.add(flare);
+            //System.out.println(main.clip.size());
+            main.fired=false;
+            //System.out.println(fired);
+        }
     }
 
 

@@ -2,9 +2,15 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
+import java.util.ArrayList;
+
 public class Main extends PApplet {
 	
 	Player player;
+    FlareGun gun;
+    ArrayList<Flare> clip=new ArrayList<Flare>();
+    public boolean fired=true;
+    public boolean fall=false;
     
     public static void main(String[] args) {
         String[] a = {"MAIN"};
@@ -33,6 +39,11 @@ public class Main extends PApplet {
     	player.render();
     	player.move();
     	player.flareAim();
+
+        for(int i=0;i<clip.size();i++)
+        {
+            clip.get(i).render();
+        }
 
     }
 }

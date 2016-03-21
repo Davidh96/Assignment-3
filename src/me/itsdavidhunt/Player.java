@@ -57,8 +57,8 @@ public class Player extends PApplet {
 	
 	public void flareAim()
 	{
-		FlareGun gun=new FlareGun(pos.x,pos.y,main);
-		gun.render();
+		main.gun=new FlareGun(pos.x,pos.y,main);
+		main.gun.render();
 		main.stroke(255);
 		main.line(pos.x+plHeight/2, pos.y+plWidth/2, main.mouseX, main.mouseY);
 	}
