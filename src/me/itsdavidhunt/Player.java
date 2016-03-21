@@ -15,7 +15,7 @@ public class Player extends PApplet {
 	public Player(Main _main)
 	{
 		main = _main;
-		pos=new PVector(main.width/2,main.height/2);
+		pos=new PVector(main.width/2,main.height/2-plHeight);
 		movement=new PVector(5,0);
 	}
 	
