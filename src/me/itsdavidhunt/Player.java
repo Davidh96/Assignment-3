@@ -6,10 +6,10 @@ public class Player extends PApplet {
 	
 	Main main;
 	
-	PVector pos;
-	PVector movement;
-	int plHeight=20;
-	int plWidth=10;
+	public PVector pos;
+	private PVector movement;
+	private float plHeight=30;
+	private float plWidth=20;
 	
 	//creates player
 	public Player(Main _main)
@@ -22,14 +22,17 @@ public class Player extends PApplet {
 	//displays the player on screen
 	public void render()
 	{
+		main.fill(255);
 		main.rect(pos.x,pos.y,plWidth,plHeight);
 	}
 	
+	float jump=0;
+	int frame=0;
 	//controls the players movements
 	public void move()
 	{
 		if(main.keyPressed)
-		{	
+		{
 			//if player wants to go right
 			if(main.key=='d')
 			{
@@ -41,11 +44,21 @@ public class Player extends PApplet {
 			{
 				pos.sub(movement);
 			}
+			
+			if(main.key=='w')
+			{
+				while (jump <= 10) {
+					jump++;
+					pos.y -= jump;
+				}
+			}
 		}
 	}
 	
 	public void flareAim()
 	{
+		FlareGun gun=new FlareGun(pos.x,pos.y,main);
+		gun.render();
 		main.stroke(255);
 		main.line(pos.x+plHeight/2, pos.y+plWidth/2, main.mouseX, main.mouseY);
 	}

@@ -2,7 +2,6 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
- 
 public class Main extends PApplet {
 	
 	Player player;
@@ -14,7 +13,7 @@ public class Main extends PApplet {
 
     public void settings(){
     //fullScreen();
-       size(500,500);
+    size(500,500);
     }
     
     public void setup()
@@ -34,5 +33,6 @@ public class Main extends PApplet {
     	player.render();
     	player.move();
     	player.flareAim();
+
     }
 }
