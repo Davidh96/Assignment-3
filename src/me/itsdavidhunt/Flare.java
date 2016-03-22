@@ -21,7 +21,7 @@ public class Flare extends GameObject{
     public Flare(Main _main)
     {
         super(_main);
-        Flare(super.main.gun.pos.x,super.main.gun.pos.y,super.main.mouseX,super.main.mouseY);
+        Flare(super.main.gun.pos.x,super.main.player.pos.y-super.main.player.getHeight(),super.main.mouseX,super.main.mouseY);
     }
 
     public void Flare(float x,float y,float goX,float goY)

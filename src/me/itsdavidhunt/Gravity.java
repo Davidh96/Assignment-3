@@ -17,5 +17,6 @@ public class Gravity extends PApplet {
             //the flare drops faster the longer it is in the air
             speed+=(speed*.01);
         }
+
     }
 }

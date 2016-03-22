@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class FlareGun extends GameObject {
 
+    float fgWidth= (float)(super.main.height*.01);
 
     public FlareGun(Main _main)
     {
@@ -16,8 +17,7 @@ public class FlareGun extends GameObject {
     public void render()
     {
         super.main.fill(255,0,0);
-        super.main.rect(pos.x,pos.y,10,10);
-        //System.out.println(clip.size());
+        super.main.rect(pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
 
         if(super.main.mousePressed)
         {
@@ -32,9 +32,7 @@ public class FlareGun extends GameObject {
         if(super.main.fired) {
             Flare flare = new Flare(main);
             super.main.clip.add(flare);
-            //System.out.println(main.clip.size());
             super.main.fired=false;
-            //System.out.println(fired);
         }
     }
 
