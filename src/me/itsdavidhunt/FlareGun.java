@@ -10,7 +10,7 @@ public class FlareGun extends GameObject {
     {
         super(_main);
         pos=new PVector(main.player.pos.x,main.player.pos.y);
-        //main = _main;
+
     }
 
     public void render()
@@ -23,6 +23,8 @@ public class FlareGun extends GameObject {
         {
             shoot(super.main.mouseX,super.main.mouseY);
         }
+
+        addGravity(this);
     }
 
     public void shoot(float mX,float mY)

@@ -22,6 +22,8 @@ public class Player extends GameObject {
 	{
 		super.main.fill(255);
 		super.main.rect(pos.x,pos.y,plWidth,plHeight);
+
+		addGravity(this);
 	}
 	
 	float jump=0;
@@ -44,6 +46,7 @@ public class Player extends GameObject {
 			
 			if(super.main.key=='w')
 			{
+				inAir=true;
 				while (jump <= 10) {
 					jump++;
 					pos.y -= jump;
