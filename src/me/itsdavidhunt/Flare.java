@@ -2,11 +2,9 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
-public class Flare extends PApplet{
+public class Flare extends GameObject{
 
-    Main main;
 
-    PVector pos;
     PVector goToPos;
     PVector pDest;
     int frame=0;
@@ -16,27 +14,33 @@ public class Flare extends PApplet{
     boolean grow=true;
     int grown=10;
 
-    public Flare(float x,float y,float goX,float goY,Main _main)
+    public Flare(Main _main)
     {
-        main=_main;
-        
+        super(_main);
+        Flare(super.main.gun.pos.x,super.main.gun.pos.y,super.main.mouseX,super.main.mouseY);
+    }
+
+    public void Flare(float x,float y,float goX,float goY)
+    {
+
         //the actual position of the flare
         pos=new PVector(x,y);
 
         //goToPos holds the positon that the user selected
         goToPos=new PVector(goX,goY);
-        fWidth=(float)(main.width*0.01);
+        fWidth=(float)(super.main.width*0.01);
 
         //pDest will be used to see where the flare was shot in relation to the player
-        pDest=new PVector(main.player.pos.x,main.player.pos.y);
+        pDest=new PVector(super.main.player.pos.x,super.main.player.pos.y);
     }
 
     public void render()
     {
-        main.fill(0,255,0);
-        main.rect(pos.x,pos.y,fWidth,fWidth);
-        main.fill(0,255,0,100);
-        main.stroke(0,255,0,100);
+        super.main.fill(0,255,0);
+        super.main.stroke(0,255,0);
+        super.main.rect(pos.x,pos.y,fWidth,fWidth);
+        super.main.fill(0,255,0,100);
+        super.main.stroke(0,255,0,100);
 
         //makes the flare look like its flickering
         if(grow)
@@ -57,7 +61,7 @@ public class Flare extends PApplet{
             }
         }
 
-        main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)fWidth/2,fWidth*10-radius,fWidth*10-radius);
+        super.main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)fWidth/2,fWidth*10-radius,fWidth*10-radius);
 
         move();
     }
@@ -66,27 +70,27 @@ public class Flare extends PApplet{
     public void move()
     {
         //if the flare is not falling
-        if(main.fall==false) {
+        if(super.main.fall==false) {
 
             //if the flare hasnt touched the ground
-            if (pos.y < main.height / 2 ) {
+            if (pos.y < super.main.height / 2 ) {
                 //move towards the chosen X value
 
                 if (pos.x < goToPos.x) {
-                    pos.x += main.width * speed;
+                    pos.x += super.main.width * speed;
                 }
                 if (pos.x > goToPos.x) {
-                    pos.x -= main.width * speed;
+                    pos.x -= super.main.width * speed;
                 }
             }
 
             //move towards the chosen Y value
 
             if (pos.y < goToPos.y) {
-                pos.y += main.height * speed;
+                pos.y += super.main.height * speed;
             }
             if (pos.y > goToPos.y) {
-                pos.y -= main.height * speed;
+                pos.y -= super.main.height * speed;
             }
             frame++;
 
@@ -95,27 +99,48 @@ public class Flare extends PApplet{
         }
 
 
-            //if after certain amount of time, the flare has reached the chose Y value or chosen X value then drop!
-            if(frame==100 || pos.y<goToPos.y || (pDest.x>pos.x && goToPos.x>pos.x) || (pDest.x<pos.x && goToPos.x-fWidth<pos.x))
+        //if after certain amount of time, the flare has reached the chose Y value or chosen X value then drop!
+        if(frame==100 || pos.y<goToPos.y || (pDest.x>pos.x && goToPos.x>pos.x) || (pDest.x<pos.x && goToPos.x-fWidth<pos.x))
+        {
+            super.main.fall=true;
+        }
+
+        //controls how a flare falls, to make it look more realistic
+        if(super.main.fall)
+        {
+            //if the flare is falling to the left
+            if(pDest.x>pos.x && pos.y < super.main.height / 2)
             {
-                main.fall=true;
+                pos.x-=main.width*.001;
+            }
+            //if the flare is falling to the right
+            if(pDest.x<pos.x && pos.y < super.main.height / 2)
+            {
+                pos.x+=super.main.width*.001;
             }
 
-            //controls how a flare falls, trying to make it look realistic
-            if(main.fall)
-            {
-                if(pDest.x>pos.x && pos.y < main.height / 2)
+            //if the flare is in th air
+            if (pos.y < super.main.height/2) {
+
+                //drop flare
+                pos.y +=super.main.height*speed ;
+
+                //controls which direction to drop flare
+                //if on left
+                if(pDest.x>pos.x)
                 {
-                    //speeds up the fall of the flare when going left
-                    pos.x-=main.width*.001;
+                    pos.x-=1;
                 }
-                if(pDest.x<pos.x && pos.y < main.height / 2)
-                {
-                    //speeds up the fall of the flare when going right
-                    pos.x+=main.width*.001;
+                //if on right
+                else {
+                    pos.x += 1;
                 }
 
             }
+
+            //the flare drops faster the longer it is in the air
+            speed+=(speed*.025);
+        }
 
 
 

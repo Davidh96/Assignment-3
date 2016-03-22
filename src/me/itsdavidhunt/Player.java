@@ -2,50 +2,47 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
-public class Player extends PApplet {
-	
-	Main main;
-	
-	public PVector pos;
+public class Player extends GameObject {
+
 	private PVector movement;
 	private float plHeight=30;
 	private float plWidth=20;
-	
+
+
 	//creates player
 	public Player(Main _main)
 	{
-		main = _main;
-		pos=new PVector(main.width/2,main.height/2-plHeight);
+		super(_main);
+		pos=new PVector(super.main.width/2,super.main.height/2-plHeight);
 		movement=new PVector(5,0);
 	}
-	
+
 	//displays the player on screen
 	public void render()
 	{
-		main.fill(255);
-		main.rect(pos.x,pos.y,plWidth,plHeight);
+		super.main.fill(255);
+		super.main.rect(pos.x,pos.y,plWidth,plHeight);
 	}
 	
 	float jump=0;
-	int frame=0;
 	//controls the players movements
 	public void move()
 	{
-		if(main.keyPressed)
+		if(super.main.keyPressed)
 		{
 			//if player wants to go right
-			if(main.key=='d')
+			if(super.main.key=='d')
 			{
 				pos.add(movement);
 			}
 			
 			//if player wants to go left
-			if(main.key=='a')
+			if(super.main.key=='a')
 			{
 				pos.sub(movement);
 			}
 			
-			if(main.key=='w')
+			if(super.main.key=='w')
 			{
 				while (jump <= 10) {
 					jump++;
@@ -57,10 +54,10 @@ public class Player extends PApplet {
 	
 	public void flareAim()
 	{
-		main.gun=new FlareGun(pos.x,pos.y,main);
-		main.gun.render();
-		main.stroke(255);
-		main.line(pos.x+plHeight/2, pos.y+plWidth/2, main.mouseX, main.mouseY);
+		super.main.gun=new FlareGun(main);
+		super.main.gun.render();
+		super.main.stroke(255);
+		super.main.line(pos.x+plHeight/2, pos.y+plWidth/2, main.mouseX, main.mouseY);
 	}
 	  
 }
