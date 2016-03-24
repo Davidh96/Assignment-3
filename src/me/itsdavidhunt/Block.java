@@ -16,24 +16,27 @@ public class Block extends GameObject {
         blHeight= (float)(super.main.height*.05);
         blWidth= (float)(super.main.height*.05);
 
+        main.fill(255,0,0);
         super.main.rect(pos.x,pos.y,blWidth,blHeight);
 
         detect();
+
     }
 
     public void detect()
     {
-        for(int i=0;i<super.main.objects.size();i++)
+        for(int i=0;i<main.objects.size();i++)
         {
-            if((super.main.objects.get(i).pos.y>=pos.y && super.main.objects.get(i).pos.y<=pos.y+blWidth/2) && (super.main.objects.get(i).pos.x>=pos.x && super.main.objects.get(i).pos.x<=pos.x+blWidth))
+            if(pos.y<=main.objects.get(i).pos.y && pos.y+(blWidth/4)>main.objects.get(i).pos.y && pos.x<=main.objects.get(i).pos.x && pos.x+blWidth>=main.objects.get(i).pos.x )
             {
-                super.main.objects.get(i).inAir=false;
-                super.main.objects.get(i).pos.y=pos.y;
-            }
-            else
-            {
-                super.main.objects.get(i).inAir=true;
+                main.objects.get(i).inAir=false;
             }
         }
     }
+
+    public float getWidth()
+    {
+        return blWidth;
+    }
+
 }

@@ -27,6 +27,7 @@ public class Player extends GameObject {
 		super.main.rect(pos.x,pos.y,plWidth,-plHeight);
 
 		addGravity(this);
+
 	}
 	
 	//controls the players movements
@@ -61,7 +62,6 @@ public class Player extends GameObject {
 	private void jump()
 	{
 		pos.y -= super.main.height * speed;
-		inAir=true;
 	}
 	
 	public void flareAim()

@@ -23,8 +23,6 @@ public class FlareGun extends GameObject {
         {
             shoot(super.main.mouseX,super.main.mouseY);
         }
-
-        addGravity(this);
     }
 
     public void shoot(float mX,float mY)

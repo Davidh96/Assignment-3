@@ -69,6 +69,8 @@ public class Flare extends GameObject{
 
         move();
         addGravity(this);
+
+
     }
 
     public void move()
@@ -108,7 +110,7 @@ public class Flare extends GameObject{
 
         //flare slows down as it goes higher
         speed-=(speed*.01);
-        inAir=true;
+
 
     }
 }

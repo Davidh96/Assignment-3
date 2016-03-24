@@ -7,6 +7,7 @@ public abstract class GameObject extends PApplet {
     Main main;
     PVector pos;
     boolean inAir=false;
+    float speed=(float).001;
 
     public GameObject(Main _main)
     {
@@ -16,6 +17,7 @@ public abstract class GameObject extends PApplet {
     public void addGravity(GameObject obj)
     {
         Gravity.pushDown(obj,main);
+        inAir=true;
     }
 
     public abstract void render();
