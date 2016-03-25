@@ -8,7 +8,6 @@ public class Main extends PApplet {
 	Player player;
     FlareGun gun;
     Block ground;
-    Block ground2;
 
     ArrayList<Flare> clip=new ArrayList<Flare>();
     ArrayList<GameObject>objects=new ArrayList<GameObject>();
@@ -50,16 +49,19 @@ public class Main extends PApplet {
             clip.get(i).render();
         }
 
-        ground=new Block(this);
-        ground.pos=new PVector(width/2,height/2);
-        ground2=new Block(this);
-        ground2.pos=new PVector(100,height/2);
-        if(blArray.size()<1) {
-            blArray.add(ground);
-            blArray.add(ground2);
+        if(blArray.size()<10)
+        {
+            for(int i=0;i<10;i++)
+            {
+                ground=new Block(this);
+                ground.pos=new PVector((width/10)*i,height-10);
+                blArray.add(ground);
+            }
         }
-        ground.render();
-        ground2.render();
+        for(int i=0;i<blArray.size();i++)
+        {
+            blArray.get(i).render();
+        }
 
     }
 }

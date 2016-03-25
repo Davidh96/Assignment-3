@@ -38,11 +38,17 @@ public class Flare extends GameObject{
         pDest=new PVector(super.main.player.pos.x,super.main.player.pos.y);
     }
 
+    public float getWidth()
+    {
+        return fWidth;
+    }
+
+    //renders the flare
     public void render()
     {
         super.main.fill(0,255,0);
         super.main.stroke(0,255,0);
-        super.main.rect(pos.x,pos.y,fWidth,fWidth);
+        super.main.rect(pos.x,pos.y,fWidth,-fWidth);
         super.main.fill(0,255,0,100);
         super.main.stroke(0,255,0,100);
 
@@ -65,7 +71,7 @@ public class Flare extends GameObject{
             }
         }
 
-        super.main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)fWidth/2,fWidth*10-radius,fWidth*10-radius);
+        super.main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)(-fWidth)/2,fWidth*10-radius,fWidth*10-radius);
 
         move();
         addGravity(this);
@@ -73,43 +79,44 @@ public class Flare extends GameObject{
 
     }
 
+    //controls the flares movement
     public void move()
     {
-        //if going right
-        if (goToPos.x > pDest.x) {
-            goRight=true;
-        }
+        if(inAir==true) {
+            //if going right
+            if (goToPos.x > pDest.x) {
+                goRight = true;
+            }
 
-        //if going left
-        if (goToPos.x  < pDest.x) {
-            goLeft=true;
-        }
+            //if going left
+            if (goToPos.x < pDest.x) {
+                goLeft = true;
+            }
 
-        //continue to go left
-        if(goLeft)
-        {
-            pos.x -= super.main.width * speed;
-        }
+            //continue to go left
+            if (goLeft) {
+                pos.x -= super.main.width * speed;
+            }
 
-        //continue to go Right
-        if(goRight)
-        {
-            pos.x += super.main.width * speed;
-        }
+            //continue to go Right
+            if (goRight) {
+                pos.x += super.main.width * speed;
+            }
 
-        //move towards the chosen Y value
-        if (pos.y > goToPos.y) {
-            goUp=true;
-        }
+            //move towards the chosen Y value
+            if (pos.y > goToPos.y) {
+                goUp = true;
+            }
 
-        //continue going up
-        if(goUp)
-        {
-            pos.y -= super.main.height * speed;
-        }
+            //continue going up
+            if (goUp) {
+                pos.y -= super.main.height * speed;
+            }
 
-        //flare slows down as it goes higher
-        speed-=(speed*.01);
+            //flare slows down as it goes higher
+            speed -= (speed * .01);
+
+        }
 
 
     }

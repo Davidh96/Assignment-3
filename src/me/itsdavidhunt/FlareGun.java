@@ -11,9 +11,14 @@ public class FlareGun extends GameObject {
     {
         super(_main);
         pos=new PVector(main.player.pos.x,main.player.pos.y);
-
     }
 
+    public float getWidth()
+    {
+        return fgWidth;
+    }
+
+    //renders Flare Gun
     public void render()
     {
         super.main.fill(255,0,0);
@@ -25,11 +30,13 @@ public class FlareGun extends GameObject {
         }
     }
 
+    //controls the firing of flares
     public void shoot(float mX,float mY)
     {
         if(super.main.fired) {
             Flare flare = new Flare(main);
             super.main.clip.add(flare);
+            super.main.objects.add(flare);
             super.main.fired=false;
         }
     }

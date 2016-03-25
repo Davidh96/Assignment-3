@@ -46,7 +46,8 @@ public class Player extends GameObject {
 			{
 				pos.sub(movement);
 			}
-			
+
+			//if player wants to jump
 			if(super.main.key=='w')
 			{
 				jump();
@@ -59,11 +60,18 @@ public class Player extends GameObject {
 		return plHeight;
 	}
 
+	public float getWidth()
+	{
+		return plWidth;
+	}
+
+	//moves player up!
 	private void jump()
 	{
 		pos.y -= super.main.height * speed;
 	}
-	
+
+	//controls the creation of Flare Gun and aiming
 	public void flareAim()
 	{
 		super.main.gun=new FlareGun(main);
