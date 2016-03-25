@@ -7,7 +7,7 @@ public class Player extends GameObject {
 	private PVector movement;
 	private float plHeight;
 	private float plWidth;
-	float speed=(float).004;
+	float jSpeed=(float).004;
 
 
 	//creates player
@@ -27,6 +27,8 @@ public class Player extends GameObject {
 		super.main.rect(pos.x,pos.y,plWidth,-plHeight);
 
 		addGravity(this);
+
+		System.out.println(speed);
 
 	}
 	
@@ -68,7 +70,7 @@ public class Player extends GameObject {
 	//moves player up!
 	private void jump()
 	{
-		pos.y -= super.main.height * speed;
+		pos.y -= super.main.height * jSpeed;
 	}
 
 	//controls the creation of Flare Gun and aiming

@@ -8,6 +8,7 @@ public class Main extends PApplet {
 	Player player;
     FlareGun gun;
     Block ground;
+    Enemy enemy;
 
     ArrayList<Flare> clip=new ArrayList<Flare>();
     ArrayList<GameObject>objects=new ArrayList<GameObject>();
@@ -28,6 +29,7 @@ public class Main extends PApplet {
     public void setup()
     {
     	player=new Player(this);
+        enemy=new Enemy(this);
     }
     
 
@@ -43,6 +45,10 @@ public class Main extends PApplet {
     	player.move();
         objects.add(player);
     	player.flareAim();
+
+
+        enemy.render();
+        objects.add(enemy);
 
         for(int i=0;i<clip.size();i++)
         {
