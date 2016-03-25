@@ -7,6 +7,7 @@ public class Enemy extends GameObject{
 
     float enWidth;
     float enHeight;
+    boolean goLeft=false;
 
     public Enemy(Main _main) {
         super(_main);
@@ -22,9 +23,46 @@ public class Enemy extends GameObject{
         super.main.stroke(255,0,0);
         super.main.rect(pos.x,pos.y,enWidth,enHeight);
 
+        patrol();
         addGravity(this);
+
     }
 
+    //controls the movement of an enemy
+    public void patrol()
+    {
+        for(int i=0;i<main.blArray.size();i++)
+        {
+            //if enemy is on block
+            if (pos.x + getWidth() <= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth() && pos.x >= main.blArray.get(i).pos.x) {
+
+                if(goLeft) {
+                    if (pos.x + getWidth() <= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth()) {
+                        goLeft = true;
+                    }
+                    if (pos.x + getWidth() >= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth()) {
+                        goLeft = false;
+                    }
+                }
+                else
+                {
+                    if(pos.x<=main.blArray.get(i).pos.x)
+                    {
+                        goLeft=true;
+                    }
+                }
+                if(goLeft)
+                {
+                    pos.x++;
+                }
+                else
+                {
+                    pos.x--;
+                }
+            }
+
+        }
+    }
 
     public float getWidth() {
         return enWidth;

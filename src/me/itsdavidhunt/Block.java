@@ -15,7 +15,7 @@ public class Block extends GameObject {
         blHeight= (float)(super.main.height*.05);
         blWidth= (float)(super.main.height*.05);
 
-        main.fill(255,0,0);
+        main.fill(255);
         main.stroke(0);
         super.main.rect(pos.x,pos.y,blWidth,blHeight);
 

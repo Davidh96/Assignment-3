@@ -28,7 +28,6 @@ public class Player extends GameObject {
 
 		addGravity(this);
 
-		System.out.println(speed);
 
 	}
 	
