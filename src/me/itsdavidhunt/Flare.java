@@ -5,37 +5,36 @@ import processing.core.*;
 public class Flare extends GameObject{
 
 
-    PVector goToPos;
-    PVector pDest;
-    float fWidth;
-    float speed=(float).004;
-    float radius=0;
-    boolean grow=true;
-    int grown=10;
+    private PVector goToPos;
+    private PVector pDest;
+    private float fWidth;
+    private float speed=(float).004;
+    private float radius=0;
+    private boolean grow=true;
+    private int grown=10;
 
     //these booleans are used so that the flare goes around where the players asks it to, not exactly to the point chosen. This makes the flare physics a little bit more realistic!
-    boolean goLeft=false;
-    boolean goRight=false;
-    boolean goUp=false;
+    private boolean goLeft=false;
+    private boolean goRight=false;
+    private boolean goUp=false;
 
     public Flare(Main _main)
     {
         super(_main);
-        Flare(super.main.gun.pos.x,super.main.player.pos.y-super.main.player.getHeight(),super.main.mouseX,super.main.mouseY);
+        Flare(main.gun.pos.x,main.player.pos.y-main.player.getHeight(),main.mouseX,main.mouseY);
     }
 
     public void Flare(float x,float y,float goX,float goY)
     {
-
         //the actual position of the flare
         pos=new PVector(x,y);
 
         //goToPos holds the positon that the user selected
         goToPos=new PVector(goX,goY);
-        fWidth=(float)(super.main.width*0.01);
+        fWidth=(float)(main.width*0.01);
 
         //pDest will be used to see where the flare was shot in relation to the player
-        pDest=new PVector(super.main.player.pos.x,super.main.player.pos.y);
+        pDest=new PVector(main.player.pos.x,main.player.pos.y);
     }
 
     public float getWidth()
@@ -46,11 +45,11 @@ public class Flare extends GameObject{
     //renders the flare
     public void render()
     {
-        super.main.fill(0,255,0);
-        super.main.stroke(0,255,0);
-        super.main.rect(pos.x,pos.y,fWidth,-fWidth);
-        super.main.fill(0,255,0,100);
-        super.main.stroke(0,255,0,100);
+        main.fill(0,255,0);
+        main.stroke(0,255,0);
+        main.rect(pos.x,pos.y,fWidth,-fWidth);
+        main.fill(0,255,0,100);
+        main.stroke(0,255,0,100);
 
         //makes the flare look like its flickering
         if(grow)
@@ -71,11 +70,16 @@ public class Flare extends GameObject{
             }
         }
 
-        super.main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)(-fWidth)/2,fWidth*10-radius,fWidth*10-radius);
+        //if flare goes off screen, remove it
+        if(pos.y-getWidth()>main.height)
+        {
+            main.clip.remove(this);
+        }
+
+        main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)(-fWidth)/2,fWidth*10-radius,fWidth*10-radius);
 
         move();
         addGravity(this);
-
 
     }
 
@@ -95,12 +99,12 @@ public class Flare extends GameObject{
 
             //continue to go left
             if (goLeft) {
-                pos.x -= super.main.width * speed;
+                pos.x -= main.width * speed;
             }
 
             //continue to go Right
             if (goRight) {
-                pos.x += super.main.width * speed;
+                pos.x += main.width * speed;
             }
 
             //move towards the chosen Y value
@@ -110,7 +114,7 @@ public class Flare extends GameObject{
 
             //continue going up
             if (goUp) {
-                pos.y -= super.main.height * speed;
+                pos.y -= main.height * speed;
             }
 
             //flare slows down as it goes higher

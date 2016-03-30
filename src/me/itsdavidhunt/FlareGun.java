@@ -1,11 +1,11 @@
 package me.itsdavidhunt;
 
 import processing.core.*;
-import java.util.ArrayList;
+
 
 public class FlareGun extends GameObject {
 
-    float fgWidth= (float)(super.main.height*.01);
+    private float fgWidth= (float)(main.height*.01);
 
     public FlareGun(Main _main)
     {
@@ -21,25 +21,28 @@ public class FlareGun extends GameObject {
     //renders Flare Gun
     public void render()
     {
-        super.main.fill(255,0,0);
-        super.main.rect(pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
+        main.fill(255,0,0);
+        main.rect(pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
 
-        if(super.main.mousePressed)
+        if(main.mousePressed)
         {
-            shoot(super.main.mouseX,super.main.mouseY);
+            shoot();
         }
     }
 
     //controls the firing of flares
-    public void shoot(float mX,float mY)
+    public void shoot()
     {
-        if(super.main.fired) {
+        //prevents multiple flares being fired at once
+        if(main.fired) {
+            //create a new flare
             Flare flare = new Flare(main);
-            super.main.clip.add(flare);
-            super.main.objects.add(flare);
-            super.main.fired=false;
+            main.clip.add(flare);
+            main.objects.add(flare);
+            main.fired=false;
         }
     }
+
 
 
 

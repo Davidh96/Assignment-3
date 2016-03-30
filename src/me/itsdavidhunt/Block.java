@@ -2,13 +2,13 @@ package me.itsdavidhunt;
 
 public class Block extends GameObject {
 
-    float blWidth;
-    float blHeight;
+    private float blWidth;
+    private float blHeight;
 
     public Block(Main _main) {
         super(_main);
-        blHeight= (float)(super.main.height*.05);
-        blWidth= (float)(super.main.height*.08);
+        blHeight= (float)(main.height*.05);
+        blWidth= (float)(main.height*.08);
     }
 
     //renders the block on screen
@@ -16,12 +16,11 @@ public class Block extends GameObject {
 
         main.fill(255);
         main.stroke(0);
-        super.main.rect(pos.x,pos.y,blWidth,blHeight);
+        main.rect(pos.x,pos.y,blWidth,blHeight);
 
         detect();
 
     }
-
 
     //detects if their is an object from ojbects. This will cause an objects to stop falling
     public void detect()

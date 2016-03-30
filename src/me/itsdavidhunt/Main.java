@@ -5,14 +5,14 @@ import java.util.ArrayList;
 
 public class Main extends PApplet {
 	
-	Player player;
-    FlareGun gun;
-    Block ground;
-    Enemy enemy;
+	public Player player;
+    public FlareGun gun;
+    public Block ground;
+    public Enemy enemy;
 
-    ArrayList<Flare> clip=new ArrayList<Flare>();
-    ArrayList<GameObject>objects=new ArrayList<GameObject>();
-    ArrayList<Block>blArray=new ArrayList<Block>();
+    public ArrayList<Flare> clip=new ArrayList<Flare>();
+    public ArrayList<GameObject>objects=new ArrayList<GameObject>();
+    public ArrayList<Block>blArray=new ArrayList<Block>();
 
     public boolean fired=true;
 
@@ -22,8 +22,8 @@ public class Main extends PApplet {
     }
 
     public void settings(){
-    //fullScreen();
-    size(500,500);
+    fullScreen();
+    //size(500,500);
     }
     
     public void setup()
@@ -68,5 +68,10 @@ public class Main extends PApplet {
         enemy.render();
         objects.add(enemy);
 
+    }
+
+    public void mouseReleased()
+    {
+        fired=true;
     }
 }

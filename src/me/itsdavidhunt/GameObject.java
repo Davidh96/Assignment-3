@@ -5,10 +5,10 @@ import processing.core.*;
 //gives all Game Objects basic attributes
 public abstract class GameObject extends PApplet {
 
-    Main main;
-    PVector pos;
-    boolean inAir=false;
-    float speed=(float).001;
+    public Main main;
+    public PVector pos;
+    public boolean inAir=false;
+    public float speed=(float).001;
 
     public GameObject(Main _main)
     {
