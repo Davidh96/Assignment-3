@@ -41,14 +41,11 @@ public class Main extends PApplet {
     //This method will control all the classes for playing the game
     public void play()
     {
+
     	player.render();
     	player.move();
         objects.add(player);
     	player.flareAim();
-
-
-        enemy.render();
-        objects.add(enemy);
 
         for(int i=0;i<clip.size();i++)
         {
@@ -60,7 +57,7 @@ public class Main extends PApplet {
             for(int i=0;i<10;i++)
             {
                 ground=new Block(this);
-                ground.pos=new PVector((width/10)*i,height-10);
+                ground.pos=new PVector((width/22)*i,height-10);
                 blArray.add(ground);
             }
         }
@@ -68,6 +65,8 @@ public class Main extends PApplet {
         {
             blArray.get(i).render();
         }
+        enemy.render();
+        objects.add(enemy);
 
     }
 }

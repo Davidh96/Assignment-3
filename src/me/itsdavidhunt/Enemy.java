@@ -7,23 +7,24 @@ public class Enemy extends GameObject{
 
     float enWidth;
     float enHeight;
-    boolean goLeft=false;
+    boolean goLeft=true;
 
     public Enemy(Main _main) {
         super(_main);
 
         enHeight= -(float)(super.main.height*.03);
         enWidth= (float)(super.main.height*.02);
-        pos=new PVector((main.width/10),main.height-50);
+        pos=new PVector(((main.width/10)+10),main.height-50);
     }
 
     //renders enemy
     public void render() {
-        super.main.fill(255,0,0);
-        super.main.stroke(255,0,0);
+        super.main.fill(0);
+        super.main.stroke(255);
         super.main.rect(pos.x,pos.y,enWidth,enHeight);
 
         patrol();
+        detect();
         addGravity(this);
 
     }
@@ -31,36 +32,53 @@ public class Enemy extends GameObject{
     //controls the movement of an enemy
     public void patrol()
     {
-        for(int i=0;i<main.blArray.size();i++)
-        {
-            //if enemy is on block
-            if (pos.x + getWidth() <= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth() && pos.x >= main.blArray.get(i).pos.x) {
+        int moveDir=0;
 
-                if(goLeft) {
-                    if (pos.x + getWidth() <= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth()) {
-                        goLeft = true;
-                    }
-                    if (pos.x + getWidth() >= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth()) {
+        for(int i=0;i<main.blArray.size();i++) {
+
+            //if player is on block
+            if(main.blArray.get(i).pos.x<=pos.x+getWidth() && main.blArray.get(i).pos.x+main.blArray.get(i).getWidth()>=pos.x) {
+
+                //if the current position of enemy is greater than the left edge of the block and they have reached the right end of the block
+                if (pos.x >= main.blArray.get(i).pos.x && goLeft) {
+                    //move left
+                    moveDir = -1;
+                    //if the enemy has reached the ned of the of the block on the left
+                    if (pos.x <= main.blArray.get(i).pos.x) {
                         goLeft = false;
                     }
                 }
-                else
-                {
-                    if(pos.x<=main.blArray.get(i).pos.x)
-                    {
-                        goLeft=true;
+
+                //if the current position of enemy is less than the right edge of the block and they have reached the left end of the block
+                if(pos.x <= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth() && goLeft == false) {
+                    //move right
+                    moveDir = 1;
+                    //if the enemy has reached the ned of the of the block on the right
+                    if (pos.x + getWidth() >= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth()) {
+                        goLeft = true;
                     }
                 }
-                if(goLeft)
-                {
-                    pos.x++;
-                }
-                else
-                {
-                    pos.x--;
+
+                pos.x = pos.x + moveDir;
+            }
+        }
+
+
+
+
+
+    }
+
+    public void detect()
+    {
+        for(int i=0;i<main.objects.size();i++)
+        {
+            if(main.objects.get(i) instanceof Player)
+            {
+                if((pos.x==main.objects.get(i).pos.x || pos.x+enWidth==main.objects.get(i).pos.x) && pos.y+enHeight<=main.objects.get(i).pos.y) {
+                    main.objects.get(i).pos.y = main.height / 2;
                 }
             }
-
         }
     }
 

@@ -16,7 +16,7 @@ public class Gravity extends PApplet {
             obj.pos.y +=main.height*obj.speed ;
 
             //the flare drops faster the longer it is in the air
-            obj.speed+=(obj.speed*.01);
+            obj.speed+=(obj.speed*.03);
         }
         //if the object is not in the air
         if(!obj.inAir)

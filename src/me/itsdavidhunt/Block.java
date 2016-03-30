@@ -7,13 +7,12 @@ public class Block extends GameObject {
 
     public Block(Main _main) {
         super(_main);
+        blHeight= (float)(super.main.height*.05);
+        blWidth= (float)(super.main.height*.08);
     }
 
     //renders the block on screen
     public void render() {
-
-        blHeight= (float)(super.main.height*.05);
-        blWidth= (float)(super.main.height*.05);
 
         main.fill(255);
         main.stroke(0);
@@ -22,6 +21,7 @@ public class Block extends GameObject {
         detect();
 
     }
+
 
     //detects if their is an object from ojbects. This will cause an objects to stop falling
     public void detect()
