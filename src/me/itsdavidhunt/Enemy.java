@@ -63,20 +63,19 @@ public class Enemy extends GameObject{
             }
         }
 
-
-
-
-
     }
 
+    //detects if the enemy has hit a player
     public void detect()
     {
         for(int i=0;i<main.objects.size();i++)
         {
             if(main.objects.get(i) instanceof Player)
             {
-                if((pos.x==main.objects.get(i).pos.x || pos.x+enWidth==main.objects.get(i).pos.x) && pos.y+enHeight<=main.objects.get(i).pos.y) {
+                //if the player is touching/in the enemy
+                if(((pos.x<=main.objects.get(i).pos.x && pos.x+getWidth()>=main.objects.get(i).pos.x) || (pos.x+getWidth()>=main.objects.get(i).pos.x && pos.x<=main.objects.get(i).pos.x+main.objects.get(i).getWidth()))&& pos.y+enHeight<=main.objects.get(i).pos.y) {
                     main.objects.get(i).pos.y = main.height / 2;
+                    main.objects.get(i).pos.x = main.width / 2;
                 }
             }
         }
