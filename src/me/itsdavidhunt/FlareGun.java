@@ -37,6 +37,12 @@ public class FlareGun extends GameObject {
             //prevents multiple flares being fired at once
             if (main.fired) {
                 main.objects.add(main.clip.get(0));
+                //spawn at player position
+                main.clip.get(0).pos= new PVector(main.gun.pos.x,main.player.pos.y-main.player.getHeight());
+                main.clip.get(0).pDest= new PVector(main.gun.pos.x,main.player.pos.y-main.player.getHeight());
+                
+                //goToPos holds the positon that the user selected
+                main.clip.get(0).goToPos=new PVector(main.mouseX,main.mouseY);
                 main.clip.remove(0);
                 main.fired = false;
             }

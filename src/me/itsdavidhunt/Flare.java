@@ -5,8 +5,8 @@ import processing.core.*;
 public class Flare extends GameObject{
 
 
-    private PVector goToPos;
-    private PVector pDest;
+    public PVector goToPos;
+    public PVector pDest;
     private float fWidth;
     private float speed=(float).004;
     private float radius=0;
@@ -21,20 +21,13 @@ public class Flare extends GameObject{
     public Flare(Main _main)
     {
         super(_main);
-        Flare(main.gun.pos.x,main.player.pos.y-main.player.getHeight(),main.mouseX,main.mouseY);
+        Flare();
     }
 
-    public void Flare(float x,float y,float goX,float goY)
+    public void Flare()
     {
-        //the actual position of the flare
-        pos=new PVector(x,y);
-
-        //goToPos holds the positon that the user selected
-        goToPos=new PVector(goX,goY);
+        //goToPos=new PVector(goX,goY);
         fWidth=(float)(main.width*0.01);
-
-        //pDest will be used to see where the flare was shot in relation to the player
-        pDest=new PVector(main.player.pos.x,main.player.pos.y);
     }
 
     public float getWidth()
