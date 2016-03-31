@@ -28,7 +28,7 @@ public class Block extends GameObject {
         for(int i=0;i<main.objects.size();i++)
         {
             //if the object is on top of the block
-            if(pos.y<=main.objects.get(i).pos.y && pos.y+(blWidth/4)>main.objects.get(i).pos.y && pos.x<=main.objects.get(i).pos.x+main.objects.get(i).getWidth() && pos.x+blWidth>=main.objects.get(i).pos.x)
+            if(pos.y<=main.objects.get(i).pos.y && pos.y+(blWidth/2)>main.objects.get(i).pos.y && pos.x<=main.objects.get(i).pos.x+main.objects.get(i).getWidth() && pos.x+blWidth>=main.objects.get(i).pos.x)
             {
                 main.objects.get(i).inAir=false;
                 main.objects.get(i).pos.y=pos.y;

@@ -25,7 +25,7 @@ public class Main extends PApplet {
 
     public void settings(){
     //fullScreen();
-    size(500,500);
+    size(800,500);
     }
     
     public void setup()
@@ -35,9 +35,9 @@ public class Main extends PApplet {
         objects.add(player);
 
         fPickup3=new FlarePickup(this);
-        fPickup3.pos = new PVector(50,50);
+        fPickup3.pos = new PVector(120,50);
         fPickup=new FlarePickup(this);
-        fPickup.pos = new PVector(80,50);
+        fPickup.pos = new PVector(120,50);
 
         objects.add(fPickup3);
         objects.add(fPickup);
@@ -58,7 +58,6 @@ public class Main extends PApplet {
 
     	player.move();
 
-
         println(fPickup.inAir);
 
         for(int i=0;i<objects.size();i++)
@@ -71,7 +70,7 @@ public class Main extends PApplet {
         {
             clip.get(i).render();
         }*/
-println(clip.size());
+
         if(blArray.size()<10)
         {
             for(int i=0;i<10;i++)

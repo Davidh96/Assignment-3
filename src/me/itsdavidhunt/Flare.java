@@ -8,7 +8,7 @@ public class Flare extends GameObject{
     public PVector goToPos;
     public PVector pDest;
     private float fWidth;
-    private float speed=(float).004;
+    public float speed;
     private float radius=0;
     private boolean grow=true;
     private int grown=10;
@@ -26,7 +26,6 @@ public class Flare extends GameObject{
 
     public void Flare()
     {
-        //goToPos=new PVector(goX,goY);
         fWidth=(float)(main.width*0.01);
     }
 
@@ -115,6 +114,12 @@ public class Flare extends GameObject{
 
         }
 
+    }
 
+    public float getDistance()
+    {
+        float d=((pos.x-main.mouseX)*(pos.x-main.mouseX))+((pos.y-main.mouseY)*(pos.y-main.mouseY));
+        d=sqrt(d);
+        return d;
     }
 }
