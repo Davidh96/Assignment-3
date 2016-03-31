@@ -33,13 +33,13 @@ public class FlareGun extends GameObject {
     //controls the firing of flares
     public void shoot()
     {
-        //prevents multiple flares being fired at once
-        if(main.fired) {
-            //create a new flare
-            Flare flare = new Flare(main);
-            main.clip.add(flare);
-            main.objects.add(flare);
-            main.fired=false;
+        if(main.clip.size()>0) {
+            //prevents multiple flares being fired at once
+            if (main.fired) {
+                main.objects.add(main.clip.get(0));
+                main.clip.remove(0);
+                main.fired = false;
+            }
         }
     }
 

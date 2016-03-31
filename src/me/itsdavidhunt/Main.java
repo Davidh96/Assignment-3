@@ -9,6 +9,8 @@ public class Main extends PApplet {
     public FlareGun gun;
     public Block ground;
     public Enemy enemy;
+    public FlarePickup fPickup3;
+    public FlarePickup fPickup;
 
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
@@ -22,14 +24,26 @@ public class Main extends PApplet {
     }
 
     public void settings(){
-    fullScreen();
-    //size(500,500);
+    //fullScreen();
+    size(500,500);
     }
     
     public void setup()
     {
     	player=new Player(this);
-        enemy=new Enemy(this);
+       enemy=new Enemy(this);
+        objects.add(player);
+
+        fPickup3=new FlarePickup(this);
+        fPickup3.pos = new PVector(50,50);
+        fPickup=new FlarePickup(this);
+        fPickup.pos = new PVector(80,50);
+
+        objects.add(fPickup3);
+        objects.add(fPickup);
+
+        objects.add(enemy);
+
     }
     
 
@@ -42,16 +56,22 @@ public class Main extends PApplet {
     public void play()
     {
 
-    	player.render();
     	player.move();
-        objects.add(player);
-    	player.flareAim();
 
-        for(int i=0;i<clip.size();i++)
+
+        println(fPickup.inAir);
+
+        for(int i=0;i<objects.size();i++)
         {
-            clip.get(i).render();
+            objects.get(i).render();
         }
 
+        player.flareAim();
+        /*for(int i=0;i<clip.size();i++)
+        {
+            clip.get(i).render();
+        }*/
+println(clip.size());
         if(blArray.size()<10)
         {
             for(int i=0;i<10;i++)
@@ -65,8 +85,7 @@ public class Main extends PApplet {
         {
             blArray.get(i).render();
         }
-        enemy.render();
-        objects.add(enemy);
+        //enemy.render();
 
     }
 
