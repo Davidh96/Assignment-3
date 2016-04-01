@@ -11,6 +11,7 @@ public class Main extends PApplet {
     public Enemy enemy;
     public FlarePickup fPickup3;
     public FlarePickup fPickup;
+    public playerHUD HUD;
 
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
@@ -44,6 +45,8 @@ public class Main extends PApplet {
 
         objects.add(enemy);
 
+        HUD=new playerHUD(this);
+
     }
     
 
@@ -55,10 +58,8 @@ public class Main extends PApplet {
     //This method will control all the classes for playing the game
     public void play()
     {
-
     	player.move();
-
-        println(fPickup.inAir);
+        HUD.display();
 
         for(int i=0;i<objects.size();i++)
         {
@@ -66,10 +67,6 @@ public class Main extends PApplet {
         }
 
         player.flareAim();
-        /*for(int i=0;i<clip.size();i++)
-        {
-            clip.get(i).render();
-        }*/
 
         if(blArray.size()<10)
         {
@@ -84,7 +81,6 @@ public class Main extends PApplet {
         {
             blArray.get(i).render();
         }
-        //enemy.render();
 
     }
 

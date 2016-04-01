@@ -41,19 +41,14 @@ public class FlareGun extends GameObject {
                 main.clip.get(0).pos= new PVector(main.gun.pos.x,main.player.pos.y-main.player.getHeight());
                 main.clip.get(0).pDest= new PVector(main.gun.pos.x,main.player.pos.y-main.player.getHeight());
 
-
                 //goToPos holds the positon that the user selected
                 main.clip.get(0).goToPos=new PVector(main.mouseX,main.mouseY);
+                //will alter how far a flare goes
                 main.clip.get(0).speed=(float)(.00001*(main.clip.get(0).getDistance()));
-                main.println(main.clip.get(0).speed);
                 main.clip.remove(0);
                 main.fired = false;
             }
         }
     }
-
-
-
-
 
 }

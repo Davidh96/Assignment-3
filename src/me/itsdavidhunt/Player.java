@@ -8,6 +8,7 @@ public class Player extends GameObject {
 	private float plHeight;
 	private float plWidth;
 	private float jSpeed=(float).004;
+	public int lives=3;
 
 
 	//creates player
@@ -27,7 +28,6 @@ public class Player extends GameObject {
 		main.rect(pos.x,pos.y,plWidth,-plHeight);
 
 		addGravity(this);
-
 
 	}
 	

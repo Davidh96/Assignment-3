@@ -116,6 +116,7 @@ public class Flare extends GameObject{
 
     }
 
+    //gets the distance between the player and mouse positions
     public float getDistance()
     {
         float d=((pos.x-main.mouseX)*(pos.x-main.mouseX))+((pos.y-main.mouseY)*(pos.y-main.mouseY));
