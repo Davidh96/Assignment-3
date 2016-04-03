@@ -33,6 +33,7 @@ public class Main extends PApplet {
     {
     	player=new Player(this);
        enemy=new Enemy(this);
+        enemy.pos=new PVector(250,250);
         objects.add(player);
 
         fPickup3=new FlarePickup(this);
