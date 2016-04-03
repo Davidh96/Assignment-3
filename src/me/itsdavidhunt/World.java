@@ -16,7 +16,7 @@ public class World {
 
     public void generate()
     {
-        if(main.blArray.size()<20) {
+        if(main.blArray.size()<10) {
             float laneWidth = main.width / lanes;
             float laneHeight = main.height / lanes;
 
