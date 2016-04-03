@@ -29,11 +29,6 @@ public class Flare extends GameObject{
         fWidth=(float)(main.width*0.01);
     }
 
-    public float getWidth()
-    {
-        return fWidth;
-    }
-
     //renders the flare
     public void render()
     {
@@ -122,5 +117,15 @@ public class Flare extends GameObject{
         float d=((pos.x-main.mouseX)*(pos.x-main.mouseX))+((pos.y-main.mouseY)*(pos.y-main.mouseY));
         d=sqrt(d);
         return d;
+    }
+
+    public float getWidth()
+    {
+        return fWidth;
+    }
+
+    public float getHeight()
+    {
+        return fWidth;
     }
 }

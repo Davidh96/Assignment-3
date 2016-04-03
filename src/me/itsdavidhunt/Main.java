@@ -7,11 +7,11 @@ public class Main extends PApplet {
 	
 	public Player player;
     public FlareGun gun;
-    public Block ground;
     public Enemy enemy;
     public FlarePickup fPickup3;
     public FlarePickup fPickup;
     public playerHUD HUD;
+    public World world;
 
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
@@ -47,6 +47,8 @@ public class Main extends PApplet {
 
         HUD=new playerHUD(this);
 
+        world=new World(this);
+
     }
     
 
@@ -58,6 +60,10 @@ public class Main extends PApplet {
     //This method will control all the classes for playing the game
     public void play()
     {
+
+
+
+
     	player.move();
         HUD.display();
 
@@ -68,19 +74,8 @@ public class Main extends PApplet {
 
         player.flareAim();
 
-        if(blArray.size()<10)
-        {
-            for(int i=0;i<10;i++)
-            {
-                ground=new Block(this);
-                ground.pos=new PVector((width/22)*i,height-10);
-                blArray.add(ground);
-            }
-        }
-        for(int i=0;i<blArray.size();i++)
-        {
-            blArray.get(i).render();
-        }
+        world.generate();
+
 
     }
 

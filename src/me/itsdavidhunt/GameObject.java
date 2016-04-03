@@ -25,4 +25,5 @@ public abstract class GameObject extends PApplet {
 
     public abstract void render();
     public abstract float getWidth();
+    public abstract float getHeight();
 }

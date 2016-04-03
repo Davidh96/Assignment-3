@@ -90,4 +90,8 @@ public class Enemy extends GameObject{
     public float getWidth() {
         return enWidth;
     }
+
+    public float getHeight() {
+        return enHeight;
+    }
 }

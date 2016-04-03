@@ -7,7 +7,7 @@ public class Player extends GameObject {
 	private PVector movement;
 	private float plHeight;
 	private float plWidth;
-	private float jSpeed=(float).004;
+	private float jSpeed=(float).006;
 	public int lives=3;
 
 
