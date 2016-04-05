@@ -1,6 +1,7 @@
 package me.itsdavidhunt;
 
 import processing.core.*;
+import java.util.ArrayList;
 
 public class World {
 
@@ -16,24 +17,41 @@ public class World {
 
     public void generate()
     {
-        if(main.blArray.size()<10) {
+        boolean stairs[]=new boolean[lanes];
+        for(int i=0;i<stairs.length;i++)
+        {
+            stairs[i]=false;
+        }
+
+        while(main.blArray.size()<20) {
             float laneWidth = main.width / lanes;
             float laneHeight = main.height / lanes;
 
             int randEnemySpawn=(int)main.random(0,lanes);
             int randPickupSpawn=(int)main.random(0,lanes);
 
-
             for (int i = 0; i < lanes; i++) {
 
-                float rand2;
+                float rand2=0;
 
                 if(main.blArray.size()<10) {
                     rand2 = main.random(7, 9);
+
+                    if (rand2 > 8) {
+                        stairs[i] = true;
+                    }
+
+
                 }
-                else
+                if(main.blArray.size()>=10)
                 {
-                    rand2 = main.random(4, 6);
+                    rand2 = main.random(5, 6);
+
+                    if(stairs[i])
+                    {
+                        rand2=main.random(6,7);
+                    }
+
                 }
 
                 float xPos = i * laneWidth;

@@ -40,7 +40,6 @@ public class Enemy extends GameObject{
 
             //if player is on block
             if(main.blArray.get(i).pos.x<pos.x+getWidth() && main.blArray.get(i).pos.x+main.blArray.get(i).getWidth()>pos.x ) {
-                main.println(pos.x,main.blArray.get(i).pos.x,i);
                 //if the current position of enemy is greater than the left edge of the block and they have reached the right end of the block
                 if (pos.x >= main.blArray.get(i).pos.x && goLeft) {
                     //move left
@@ -78,7 +77,7 @@ public class Enemy extends GameObject{
             {
                 Player pTemp=(Player)main.objects.get(i);
                 //if the player is touching/in the enemy
-                if(((pos.x<=pTemp.pos.x && pos.x+getWidth()>=pTemp.pos.x) || (pos.x+getWidth()>=pTemp.pos.x && pos.x<=pTemp.pos.x+pTemp.getWidth()))&& pos.y+enHeight<=pTemp.pos.y) {
+                if(((pos.x<=pTemp.pos.x && pos.x+getWidth()>=pTemp.pos.x) || (pos.x+getWidth()>=pTemp.pos.x && pos.x<=pTemp.pos.x+pTemp.getWidth()))&& pos.y+enHeight<=pTemp.pos.y && pos.y>=pTemp.pos.y) {
                     pTemp.pos.y = main.height / 2;
                     pTemp.pos.x = main.width / 2;
                     pTemp.speed = (float).001;

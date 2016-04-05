@@ -61,10 +61,6 @@ public class Main extends PApplet {
     //This method will control all the classes for playing the game
     public void play()
     {
-
-
-
-
     	player.move();
         HUD.display();
 
@@ -76,7 +72,6 @@ public class Main extends PApplet {
         player.flareAim();
 
         world.generate();
-
 
     }
 
