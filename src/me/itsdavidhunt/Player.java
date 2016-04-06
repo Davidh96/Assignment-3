@@ -10,7 +10,6 @@ public class Player extends GameObject {
 	private float jSpeed=(float).006;
 	public int lives=3;
 
-
 	//creates player
 	public Player(Main _main)
 	{
@@ -53,6 +52,11 @@ public class Player extends GameObject {
 			{
 				jump();
 			}
+
+			if(main.key=='s')
+			{
+				drop();
+			}
 		}
 	}
 
@@ -70,6 +74,13 @@ public class Player extends GameObject {
 	private void jump()
 	{
 		pos.y -= main.height * jSpeed;
+	}
+
+	private void drop()
+	{
+		if(inAir==false) {
+			pos.y = pos.y + main.blArray.get(0).getHeight() - getHeight();
+		}
 	}
 
 	//controls the creation of Flare Gun and aiming
