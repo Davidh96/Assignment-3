@@ -32,7 +32,7 @@ public class Main extends PApplet {
     public void setup()
     {
     	player=new Player(this);
-       enemy=new Enemy(this);
+        enemy=new Enemy(this);
         enemy.pos=new PVector(250,250);
         objects.add(player);
 
