@@ -8,6 +8,7 @@ public class World {
     Main main;
 
     private int lanes=10;
+    public int level;
     public boolean createWorld;
     public boolean resetWorld;
 
@@ -17,6 +18,7 @@ public class World {
         main = _main;
         createWorld=true;
         resetWorld=false;
+        level=1;
     }
 
     public void generate()
@@ -27,7 +29,7 @@ public class World {
                 stairs[i] = false;
             }
 
-            while (main.blArray.size() < 20) {
+            while (main.blArray.size() < 10*level) {
                 float laneWidth = main.width / lanes;
                 float laneHeight = main.height / lanes;
 
@@ -45,9 +47,8 @@ public class World {
                             stairs[i] = true;
                         }
 
-
                     }
-                    if (main.blArray.size() >= 10) {
+                    if (main.blArray.size() >= 10 && main.blArray.size()<20) {
                         rand2 = main.random(5, 6);
 
                         if (stairs[i]) {
@@ -55,7 +56,22 @@ public class World {
                         }
 
                     }
+                    if(main.blArray.size()>=20 && main.blArray.size()<30)
+                    {
+                        rand2 = main.random(3, 4);
 
+                        if (stairs[i]) {
+                            rand2 = main.random(4, 5);
+                        }
+                    }
+                    if(main.blArray.size()>=30 && main.blArray.size()<40)
+                    {
+                        rand2 = main.random(1, 3);
+
+                        if (stairs[i]) {
+                            rand2 = main.random(2, 4);
+                        }
+                    }
 
                     float xPos = i * laneWidth;
                     float yPos = rand2 * laneHeight;
@@ -90,6 +106,7 @@ public class World {
             }
             if(main.blArray.size()<1)
             {
+                level++;
                 createWorld=true;
                 resetWorld=false;
             }
