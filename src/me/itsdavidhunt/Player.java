@@ -5,6 +5,7 @@ import processing.core.*;
 public class Player extends GameObject {
 
 	private PVector movement;
+	public PVector spawnPos;
 	private float plHeight;
 	private float plWidth;
 	private float jSpeed=(float).006;
@@ -25,6 +26,7 @@ public class Player extends GameObject {
 	{
 		main.fill(255);
 		main.rect(pos.x,pos.y,plWidth,-plHeight);
+		main.println("Hello");
 
 		addGravity(this);
 

@@ -8,6 +8,7 @@ public class Enemy extends GameObject{
     private float enWidth;
     private float enHeight;
     private boolean goLeft=true;
+    private int moveDir=0;
 
     public Enemy(Main _main) {
         super(_main);
@@ -34,8 +35,6 @@ public class Enemy extends GameObject{
     //controls the movement of an enemy
     public void patrol()
     {
-        int moveDir=0;
-
         for(int i=0;i<main.blArray.size();i++) {
 
             //if player is on block
@@ -62,7 +61,8 @@ public class Enemy extends GameObject{
                     }
                 }
 
-                pos.x = pos.x + moveDir;
+                pos.x +=  moveDir;
+                println(moveDir);
             }
         }
 
@@ -78,8 +78,7 @@ public class Enemy extends GameObject{
                 Player pTemp=(Player)main.objects.get(i);
                 //if the player is touching/in the enemy
                 if(((pos.x<=pTemp.pos.x && pos.x+getWidth()>=pTemp.pos.x) || (pos.x+getWidth()>=pTemp.pos.x && pos.x<=pTemp.pos.x+pTemp.getWidth()))&& pos.y+enHeight<=pTemp.pos.y && pos.y>=pTemp.pos.y) {
-                    pTemp.pos.y = main.height / 2;
-                    pTemp.pos.x = main.width / 2;
+                    pTemp.pos=pTemp.spawnPos;
                     pTemp.speed = (float).001;
                     pTemp.lives-=1;
                 }

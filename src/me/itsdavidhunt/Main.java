@@ -4,7 +4,7 @@ import processing.core.*;
 import java.util.ArrayList;
 
 public class Main extends PApplet {
-	
+
 	public Player player;
     public FlareGun gun;
     public Enemy enemy;
@@ -31,10 +31,11 @@ public class Main extends PApplet {
     
     public void setup()
     {
-    	player=new Player(this);
+
         enemy=new Enemy(this);
         enemy.pos=new PVector(250,250);
-        objects.add(player);
+
+        player=new Player(this);
 
         fPickup3=new FlarePickup(this);
         fPickup3.pos = new PVector(120,50);

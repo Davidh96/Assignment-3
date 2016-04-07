@@ -24,6 +24,7 @@ public class World {
     public void generate()
     {
         if(createWorld) {
+
             boolean stairs[] = new boolean[lanes];
             for (int i = 0; i < stairs.length; i++) {
                 stairs[i] = false;
@@ -33,7 +34,7 @@ public class World {
                 float laneWidth = main.width / lanes;
                 float laneHeight = main.height / lanes;
 
-                int randEnemySpawn = (int) main.random(0, lanes);
+                int randEnemySpawn = (int) main.random(1, lanes);
                 int randPickupSpawn = (int) main.random(0, lanes);
 
                 for (int i = 0; i < lanes; i++) {
@@ -42,6 +43,13 @@ public class World {
 
                     if (main.blArray.size() < 10) {
                         rand2 = main.random(7, 9);
+
+                        if(i==0)
+                        {
+                            main.player.pos=new PVector( laneWidth/2,rand2 * laneHeight);
+                            main.objects.add(main.player);
+                        }
+
 
                         if (rand2 > 8) {
                             stairs[i] = true;
@@ -58,7 +66,7 @@ public class World {
                     }
                     if(main.blArray.size()>=20 && main.blArray.size()<30)
                     {
-                        rand2 = main.random(3, 4);
+                        rand2 = main.random(3,4);
 
                         if (stairs[i]) {
                             rand2 = main.random(4, 5);
@@ -66,10 +74,10 @@ public class World {
                     }
                     if(main.blArray.size()>=30 && main.blArray.size()<40)
                     {
-                        rand2 = main.random(1, 3);
+                        rand2 = main.random(1, 2);
 
                         if (stairs[i]) {
-                            rand2 = main.random(2, 4);
+                            rand2 = main.random(2, 3);
                         }
                     }
 
@@ -83,7 +91,7 @@ public class World {
 
                     if (randEnemySpawn == i) {
                         Enemy enemy = new Enemy(main);
-                        enemy.pos = new PVector(xPos + ground.getWidth() / 2, yPos - enemy.getWidth());
+                        enemy.pos = new PVector(xPos + (ground.getWidth() / 2), yPos - enemy.getWidth());
                         main.objects.add(enemy);
                     }
 
@@ -98,11 +106,18 @@ public class World {
 
             createWorld=false;
         }
+
+        main.player.spawnPos=new PVector(main.blArray.get(0).pos.x+(main.blArray.get(0).getWidth()/2),main.blArray.get(0).pos.y);
+
         if(resetWorld)
         {
             for(int i=0;i<main.blArray.size();i++)
             {
                 main.blArray.remove(i);
+            }
+            for(int i=0;i<main.objects.size();i++)
+            {
+                main.objects.remove(i);
             }
             if(main.blArray.size()<1)
             {
@@ -116,12 +131,12 @@ public class World {
 
         for(int i=0;i<main.blArray.size();i++)
         {
-            main.blArray.get(i).render();
-            if(main.blArray.get(i).pos.y<main.blArray.get(highestBlock).pos.y)
-            {
-                highestBlock=i;
-            }
+                main.blArray.get(i).render();
+                if (main.blArray.get(i).pos.y < main.blArray.get(highestBlock).pos.y) {
+                    highestBlock = i;
+                }
         }
+
 
         if(main.blArray.size()>9) {
             Exit exit = new Exit(main);
