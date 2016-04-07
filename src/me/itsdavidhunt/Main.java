@@ -12,13 +12,14 @@ public class Main extends PApplet {
     public FlarePickup fPickup;
     public playerHUD HUD;
     public World world;
-    //public Menu menu;
+    public Menu menu;
 
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
     public ArrayList<Block>blArray=new ArrayList<Block>();
 
     public boolean fired=true;
+    public boolean playGame=false;
 
     public static void main(String[] args) {
         String[] a = {"MAIN"};
@@ -32,7 +33,7 @@ public class Main extends PApplet {
     
     public void setup()
     {
-
+        menu=new Menu(this);
         enemy=new Enemy(this);
         enemy.pos=new PVector(250,250);
 
@@ -57,8 +58,13 @@ public class Main extends PApplet {
 
     public void draw() {
     	background(0);
-        //menu.display();
-        play();
+        if(!playGame) {
+            menu.display();
+            menu.interact();
+        }
+        if(playGame) {
+            play();
+        }
     }    
     
     //This method will control all the classes for playing the game

@@ -14,6 +14,7 @@ public class playerHUD {
 	public void display()
 	{
 		main.fill(255);
+		main.textAlign(main.LEFT,main.CENTER);
 		main.textSize((float)(main.height*.03));
 		main.text("Level: " + main.world.level,(float)(main.width*.01),(float)(main.height*.025));
 		main.text("Lives: " + main.player.lives,(float)(main.width*.01),(float)(main.height*.05));
