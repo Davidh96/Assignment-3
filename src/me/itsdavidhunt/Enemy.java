@@ -62,7 +62,6 @@ public class Enemy extends GameObject{
                 }
 
                 pos.x +=  moveDir;
-                println(moveDir);
             }
         }
 

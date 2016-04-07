@@ -132,9 +132,11 @@ public class World {
         for(int i=0;i<main.blArray.size();i++)
         {
                 main.blArray.get(i).render();
+            if(i>4) {
                 if (main.blArray.get(i).pos.y < main.blArray.get(highestBlock).pos.y) {
                     highestBlock = i;
                 }
+            }
         }
 
 
@@ -145,5 +147,10 @@ public class World {
             exit.detect();
         }
 
+    }
+
+    public void finalLevel()
+    {
+        level=1;
     }
 }

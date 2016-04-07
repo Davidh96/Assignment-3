@@ -12,6 +12,7 @@ public class Main extends PApplet {
     public FlarePickup fPickup;
     public playerHUD HUD;
     public World world;
+    //public Menu menu;
 
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
@@ -56,23 +57,47 @@ public class Main extends PApplet {
 
     public void draw() {
     	background(0);
+        //menu.display();
         play();
     }    
     
     //This method will control all the classes for playing the game
     public void play()
     {
-    	player.move();
-        HUD.display();
+        if(world.level<5 && player.lives>0) {
+            player.move();
+            HUD.display();
 
-        for(int i=0;i<objects.size();i++)
-        {
-            objects.get(i).render();
+            for (int i = 0; i < objects.size(); i++) {
+                objects.get(i).render();
+            }
+
+            player.flareAim();
+
+            world.generate();
         }
+        else if(world.level==5)
+        {
+            world.finalLevel();
+            //world.level++;
+        }
+        else if(world.level==6 || player.lives<1)
+        {
+            fill(255);
+            textAlign(CENTER,CENTER);
+            textSize((float)(width*.25));
+            text("FIN",width/2,height/4);
+            textSize((float)(width*.05));
+            if(player.lives<1)
+            {
+                text("You have lost the fight with the dark",width/2,height/2);
+            }
+            if(world.level==6)
+            {
+                text("You have beaten the darkness",width/2,height/2);
+            }
 
-        player.flareAim();
-
-        world.generate();
+        }
 
     }
 

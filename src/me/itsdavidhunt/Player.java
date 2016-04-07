@@ -26,7 +26,6 @@ public class Player extends GameObject {
 	{
 		main.fill(255);
 		main.rect(pos.x,pos.y,plWidth,-plHeight);
-		main.println("Hello");
 
 		addGravity(this);
 
