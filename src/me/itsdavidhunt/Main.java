@@ -11,6 +11,7 @@ public class Main extends PApplet {
     public World world;
     public Menu menu;
 
+
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
     public ArrayList<Block>blArray=new ArrayList<Block>();
@@ -34,14 +35,14 @@ public class Main extends PApplet {
     
     public void setup()
     {
+
         menu=new Menu(this);
 
         player=new Player(this);
 
         for(int i=0;i<3;i++)
         {
-            heads[i]=new Boss(this);
-            heads[i].headNum=i+1;
+            heads[i]=new Boss(this,i+1);
         }
 
         HUD=new playerHUD(this);
@@ -52,6 +53,8 @@ public class Main extends PApplet {
 
     public void draw() {
     	background(0);
+
+
 
         if(!playGame && endGame==false) {
             menu.display();

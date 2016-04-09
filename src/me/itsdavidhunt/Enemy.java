@@ -9,19 +9,28 @@ public class Enemy extends GameObject{
     private float enHeight;
     private boolean goLeft=true;
     private int moveDir=0;
+    private PImage img;
 
     public Enemy(Main _main) {
         super(_main);
 
-        enHeight= -(float)(main.height*.03);
-        enWidth= (float)(main.height*.02);
+        enHeight= -(float)(main.height*.06);
+        enWidth= (float)(main.width*.03);
+
     }
 
     //renders enemy
     public void render() {
-        main.fill(0);
-        main.stroke(255);
-        main.rect(pos.x,pos.y,enWidth,enHeight);
+
+        if(goLeft) {
+            img=main.loadImage("EnemyLeft.png");
+        }
+        else
+        {
+            img=main.loadImage("EnemyRight.png");
+        }
+
+        main.image(img, pos.x, pos.y, enWidth, enHeight);
 
         if(inAir==false) {
             patrol();

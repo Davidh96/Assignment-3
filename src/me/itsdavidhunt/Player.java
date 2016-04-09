@@ -10,22 +10,28 @@ public class Player extends GameObject {
 	private float plWidth;
 	private float jSpeed=(float).006;
 	public int lives=3;
+	private PImage img;
 
 	//creates player
 	public Player(Main _main)
 	{
 		super(_main);
-		plHeight= (float)(main.height*.03);
-		plWidth= (float)(main.height*.02);
+		plHeight= (float)(main.height*.06);
+		plWidth= (float)(main.width*.03);
+		//plHeight= (float)(main.height*.03);
+		//plWidth= (float)(main.height*.02);
 		pos=new PVector(main.width/2,main.height/2-plHeight);
 		movement=new PVector(5,0);
+		img= main.loadImage("playerRight.png");
+
 	}
 
 	//displays the player on screen
 	public void render()
 	{
-		main.fill(255);
-		main.rect(pos.x,pos.y,plWidth,-plHeight);
+		main.image(img, pos.x, pos.y,plWidth,-plHeight);
+		//main.fill(255);
+		//main.rect(pos.x, pos.y,plWidth,-plHeight);
 
 		addGravity(this);
 
@@ -37,7 +43,7 @@ public class Player extends GameObject {
 		}
 
 	}
-	
+
 	//controls the players movements
 	public void move()
 	{
@@ -46,12 +52,14 @@ public class Player extends GameObject {
 			//if player wants to go right
 			if(main.key=='d')
 			{
+				img= main.loadImage("playerRight.png");
 				pos.add(movement);
 			}
-			
+
 			//if player wants to go left
 			if(main.key=='a')
 			{
+				img= main.loadImage("playerLeft.png");
 				pos.sub(movement);
 			}
 
@@ -89,8 +97,10 @@ public class Player extends GameObject {
 	//allows player to drop down through blocks
 	private void drop()
 	{
+
 		if(inAir==false) {
-			pos.y = pos.y + main.blArray.get(0).getHeight() - getHeight();
+			main.println(inAir);
+			pos.y = pos.y + main.blArray.get(0).getHeight();
 		}
 	}
 
@@ -107,5 +117,5 @@ public class Player extends GameObject {
 		main.gun=new FlareGun(main);
 		main.gun.render();
 	}
-	  
+
 }

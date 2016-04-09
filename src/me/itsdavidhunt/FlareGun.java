@@ -6,11 +6,13 @@ import processing.core.*;
 public class FlareGun extends GameObject {
 
     private float fgWidth= (float)(main.height*.01);
+    private PImage img;
 
     public FlareGun(Main _main)
     {
         super(_main);
         pos=new PVector(main.player.pos.x,main.player.pos.y);
+        //img=main.loadImage("FlareGun.jpg");
 
     }
 
