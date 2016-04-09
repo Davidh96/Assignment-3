@@ -38,9 +38,11 @@ public class FlarePickup extends GameObject {
         }
     }
 
+    //returns width
     public float getWidth() {
         return fWidth;
     }
+    //returns height
     public float getHeight() {
         return fWidth;
     }

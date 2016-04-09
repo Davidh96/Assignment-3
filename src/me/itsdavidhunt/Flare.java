@@ -119,11 +119,13 @@ public class Flare extends GameObject{
         return d;
     }
 
+    //returns width
     public float getWidth()
     {
         return fWidth;
     }
 
+    //returns height
     public float getHeight()
     {
         return fWidth;

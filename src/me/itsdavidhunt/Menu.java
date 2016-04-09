@@ -7,36 +7,59 @@ public class Menu {
 
     Main main;
 
+    int color=255;
+
     public Menu(Main _main)
     {
         main = _main;
     }
 
+    //displays menu
     public void display() {
+        //title
         main.fill(255);
-        main.textAlign(main.CENTER,main.CENTER);
-        main.textSize((float)(main.width*.25));
-        main.text("FLARE",main.width/2,main.height/4);
+        main.textAlign(main.CENTER, main.CENTER);
+        main.textSize((float) (main.width * .25));
+        main.text("FLARE", main.width / 2, main.height / 4);
 
-        main.rect(0,main.height/2,main.width,main.width/8);
+        //play putton
+        main.fill(color);
+        main.rect(0, main.height / 2, main.width, main.width / 8);
         main.fill(0);
-        main.textSize((float)(main.width*.05));
-        main.text("PLAY",main.width/2,(float)(main.height-main.height/2.5));
+        main.textSize((float) (main.width * .05));
+        main.text("PLAY", main.width / 2, (float) (main.height - main.height / 2.5));
 
         main.fill(255);
-        main.textAlign(main.CENTER,main.CENTER);
-        main.textSize((float)(main.width*.05));
-        main.text("BY DAVID HUNT",main.width/2,(float)(main.height-main.height/5));
+        main.textAlign(main.CENTER, main.CENTER);
+        main.textSize((float) (main.width * .05));
+        main.text("BY DAVID HUNT", main.width / 2, (float) (main.height - main.height / 5));
     }
 
+    //controls the interaction with the menu buttons
     public void interact()
     {
+        //if hovering over play button
         if(main.mouseY>main.height/2 && main.mouseY<main.height/2+main.width/8)
         {
+            color=220;
+
+            Flare flare=new Flare(main);
+            flare.pos=new PVector(main.mouseX,main.mouseY);
+            flare.inAir=true;
+            flare.pDest=new PVector(main.mouseX,main.mouseY);
+
+            flare.goToPos=new PVector(main.mouseX,main.mouseY);
+            flare.render();
+
             if(main.mousePressed)
             {
                 main.playGame=true;
             }
         }
+        else
+        {
+            color=255;
+        }
     }
+
 }

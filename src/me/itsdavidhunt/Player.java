@@ -29,6 +29,13 @@ public class Player extends GameObject {
 
 		addGravity(this);
 
+		//if player falls off screen
+		if(pos.y-getHeight()>main.height)
+		{
+			pos=spawnPos;
+			lives--;
+		}
+
 	}
 	
 	//controls the players movements
@@ -61,11 +68,13 @@ public class Player extends GameObject {
 		}
 	}
 
+	//returns height
 	public float getHeight()
 	{
 		return plHeight;
 	}
 
+	//returns width
 	public float getWidth()
 	{
 		return plWidth;
@@ -77,6 +86,7 @@ public class Player extends GameObject {
 		pos.y -= main.height * jSpeed;
 	}
 
+	//allows player to drop down through blocks
 	private void drop()
 	{
 		if(inAir==false) {
@@ -87,10 +97,15 @@ public class Player extends GameObject {
 	//controls the creation of Flare Gun and aiming
 	public void flareAim()
 	{
-		main.gun=new FlareGun(main);
-		main.gun.render();
 		main.stroke(255);
 		main.line(pos.x+plWidth/2, pos.y-plHeight/2, main.mouseX, main.mouseY);
+	}
+
+	//sets up flaregun
+	public void flareGunSetup()
+	{
+		main.gun=new FlareGun(main);
+		main.gun.render();
 	}
 	  
 }

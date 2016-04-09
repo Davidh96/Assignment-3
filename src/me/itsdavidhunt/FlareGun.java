@@ -11,6 +11,7 @@ public class FlareGun extends GameObject {
     {
         super(_main);
         pos=new PVector(main.player.pos.x,main.player.pos.y);
+
     }
 
     //renders Flare Gun
@@ -46,11 +47,13 @@ public class FlareGun extends GameObject {
         }
     }
 
+    //returns width
     public float getWidth()
     {
         return fgWidth;
     }
 
+    //returns height
     public float getHeight()
     {
         return fgWidth;

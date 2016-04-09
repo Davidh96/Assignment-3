@@ -72,23 +72,27 @@ public class Enemy extends GameObject{
     {
         for(int i=0;i<main.objects.size();i++)
         {
+            //if player touching
             if(main.objects.get(i) instanceof Player)
             {
                 Player pTemp=(Player)main.objects.get(i);
                 //if the player is touching/in the enemy
                 if(((pos.x<=pTemp.pos.x && pos.x+getWidth()>=pTemp.pos.x) || (pos.x+getWidth()>=pTemp.pos.x && pos.x<=pTemp.pos.x+pTemp.getWidth()))&& pos.y+enHeight<=pTemp.pos.y && pos.y>=pTemp.pos.y) {
+                    //place player back in spawn
                     pTemp.pos=pTemp.spawnPos;
-                    pTemp.speed = (float).001;
+                    //decrement lives by 1
                     pTemp.lives-=1;
                 }
             }
         }
     }
 
+    //returns width
     public float getWidth() {
         return enWidth;
     }
 
+    //returns height
     public float getHeight() {
         return enHeight;
     }
