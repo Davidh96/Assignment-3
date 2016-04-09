@@ -35,6 +35,22 @@ public class Menu {
         main.text("BY DAVID HUNT", main.width / 2, (float) (main.height - main.height / 5));
     }
 
+    public void endScreen()
+    {
+        //title
+        main.fill(255);
+        main.textAlign(main.CENTER, main.CENTER);
+        main.textSize((float) (main.width * .25));
+        main.text("FIN", main.width / 2, main.height / 4);
+
+        //play putton
+        main.fill(color);
+        main.rect(0, main.height / 2, main.width, main.width / 8);
+        main.fill(0);
+        main.textSize((float) (main.width * .05));
+        main.text("REPLAY", main.width / 2, (float) (main.height - main.height / 2.5));
+    }
+
     //controls the interaction with the menu buttons
     public void interact()
     {
@@ -53,7 +69,8 @@ public class Menu {
 
             if(main.mousePressed)
             {
-                main.playGame=true;
+                main.playGame=!main.playGame;
+                main.endGame=!main.endGame;
             }
         }
         else

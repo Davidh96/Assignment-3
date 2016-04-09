@@ -13,6 +13,7 @@ public class Main extends PApplet {
     public playerHUD HUD;
     public World world;
     public Menu menu;
+    public boolean endGame=false;
 
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
@@ -45,16 +46,22 @@ public class Main extends PApplet {
 
     public void draw() {
     	background(0);
-        if(!playGame) {
+
+        if(!playGame && endGame==false) {
             menu.display();
             menu.interact();
         }
         if(playGame) {
             play();
         }
+        if(!playGame && endGame)
+        {
+            world.retry();
+            menu.endScreen();
+            menu.interact();
+        }
     }    
 
-    int count=0;
     //This method will control all the classes for playing the game
     public void play()
     {
@@ -94,7 +101,9 @@ public class Main extends PApplet {
         //displays end screen
         else if(world.level==6 || player.lives<1)
         {
-            fill(255);
+            endGame=true;
+            playGame=false;
+ /*           fill(255);
             textAlign(CENTER,CENTER);
             textSize((float)(width*.25));
             text("FIN",width/2,height/4);
@@ -108,9 +117,12 @@ public class Main extends PApplet {
             if(world.level==6)
             {
                 text("You have beaten the darkness",width/2,height/2);
-            }
+            }*/
+
+
 
         }
+
 
     }
 

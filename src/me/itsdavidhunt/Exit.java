@@ -34,6 +34,8 @@ public class Exit {
                     if(pos.y>=temp.pos.y && pos.y+getWidth()<=temp.pos.y) {
                         //reset world
                         main.world.resetWorld = true;
+                        //next level
+                        main.world.level++;
                     }
                 }
             }

@@ -30,6 +30,12 @@ public class World {
         //if new world needs to be created
         if(createWorld) {
 
+            //gives player 3 flares each level
+            for (int i = 0; i < 3; i++) {
+                Flare flare = new Flare(main);
+                main.clip.add(flare);
+            }
+
             //will ensure that the player can go up onto higher platforms
             boolean stairs[] = new boolean[lanes];
             for (int i = 0; i < stairs.length; i++) {
@@ -142,12 +148,6 @@ public class World {
                 }
             }
 
-            //gives player 3 flares each level
-            for (int i = 0; i < 3; i++) {
-                Flare flare = new Flare(main);
-                main.clip.add(flare);
-            }
-
             //the world has now been created
             createWorld=false;
         }
@@ -168,12 +168,15 @@ public class World {
             {
                 main.objects.remove(i);
             }
+            //remove all flares collected by player
+            for(int i=0;i<main.clip.size();i++)
+            {
+                main.clip.remove(i);
+            }
 
             //once all has been removed
-            if(main.blArray.size()<1 && main.objects.size()<1)
+            if(main.blArray.size()<1 && main.objects.size()<1 && main.clip.size()<1)
             {
-                //next level
-                level++;
                 //create new world
                 createWorld=true;
                 resetWorld=false;
@@ -212,5 +215,15 @@ public class World {
     public void finalLevel()
     {
         level=1;
+    }
+
+    //if the player wants to replay
+    public void retry()
+    {
+        //initialise the level and health
+        level=1;
+        main.player.lives=3;
+        //create a new world
+        resetWorld=true;
     }
 }
