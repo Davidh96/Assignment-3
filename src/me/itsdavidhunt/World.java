@@ -66,9 +66,9 @@ public class World {
                     randfPickupSpawn[num+1]=(int)main.random(1, lanes);
                 }
 
-                //give the two flares per horizontal lane random spawn location
+                //give the health pickup per horizontal lane random spawn location
                 randhPickupSpawn=(int)main.random(1, lanes);
-
+                //ensures that the health pickup and flare pickup dont spawn on same block
                 while(randhPickupSpawn==randfPickupSpawn[num] || randhPickupSpawn==randfPickupSpawn[num+1])
                 {
                     randhPickupSpawn=(int)main.random(1, lanes);
@@ -233,7 +233,12 @@ public class World {
     {
         level=1;
 
+        for(int i=0;i<3;i++)
+        {
+            main.heads[i].render();
+        }
 
+        //main.boss.render();
     }
 
     //if the player wants to replay

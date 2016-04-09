@@ -7,20 +7,20 @@ public class Main extends PApplet {
 
 	public Player player;
     public FlareGun gun;
-    public Enemy enemy;
-    public FlarePickup fPickup3;
-    public FlarePickup fPickup;
     public playerHUD HUD;
     public World world;
     public Menu menu;
-    public boolean endGame=false;
 
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
     public ArrayList<Block>blArray=new ArrayList<Block>();
 
+    public Boss heads[]=new Boss[3];
+
     public boolean fired=false;
     public boolean playGame=false;
+    public boolean endGame=false;
+    public boolean finalRound=false;
 
     public static void main(String[] args) {
         String[] a = {"MAIN"};
@@ -37,6 +37,12 @@ public class Main extends PApplet {
         menu=new Menu(this);
 
         player=new Player(this);
+
+        for(int i=0;i<3;i++)
+        {
+            heads[i]=new Boss(this);
+            heads[i].headNum=i+1;
+        }
 
         HUD=new playerHUD(this);
 
@@ -66,6 +72,7 @@ public class Main extends PApplet {
     public void play()
     {
 
+
         if(world.level<5 && player.lives>0) {
             player.move();
             HUD.display();
@@ -92,11 +99,15 @@ public class Main extends PApplet {
 
             player.flareAim();
         }
-        //load final level
-        else if(world.level==5)
+        if(world.level>4)
         {
-            //world.finalLevel();
-            world.level++;
+            finalRound=true;
+        }
+        //load final level
+        if(finalRound)
+        {
+            world.finalLevel();
+            //world.level++;
         }
         //displays end screen
         else if(world.level==6 || player.lives<1)
