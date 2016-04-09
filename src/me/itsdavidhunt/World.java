@@ -12,7 +12,8 @@ public class World {
     public boolean createWorld;
     public boolean resetWorld;
     private int randEnemySpawn[] = new int[2];
-    private int randPickupSpawn[] = new int[2];
+    private int randfPickupSpawn[] = new int[2];
+    private int randhPickupSpawn;
     private int num=0;
 
     public Block ground;
@@ -57,12 +58,20 @@ public class World {
                 }
 
                 //give the two flares per horizontal lane random spawn location
-                randPickupSpawn[num]=(int)main.random(1, lanes);
-                randPickupSpawn[num+1]=(int)main.random(1, lanes);
+                randfPickupSpawn[num]=(int)main.random(1, lanes);
+                randfPickupSpawn[num+1]=(int)main.random(1, lanes);
                 //if flare spawn on same location, move them
-                while(randPickupSpawn[num+1]==randPickupSpawn[num])
+                while(randfPickupSpawn[num+1]==randfPickupSpawn[num])
                 {
-                    randPickupSpawn[num+1]=(int)main.random(1, lanes);
+                    randfPickupSpawn[num+1]=(int)main.random(1, lanes);
+                }
+
+                //give the two flares per horizontal lane random spawn location
+                randhPickupSpawn=(int)main.random(1, lanes);
+
+                while(randhPickupSpawn==randfPickupSpawn[num] || randhPickupSpawn==randfPickupSpawn[num+1])
+                {
+                    randhPickupSpawn=(int)main.random(1, lanes);
                 }
 
                 //go through each vertical lane
@@ -139,10 +148,18 @@ public class World {
                     }
 
                     //if the pickup random lane number is the current blocks lane
-                    if (randPickupSpawn[num] == i || randPickupSpawn[num+1] == i) {
+                    if (randfPickupSpawn[num] == i || randfPickupSpawn[num+1] == i) {
                         FlarePickup flare = new FlarePickup(main);
                         flare.pos = new PVector(xPos + ground.getWidth() / 2, yPos - flare.getWidth());
                         main.objects.add(flare);
+
+                    }
+
+                    //if the pickup random lane number is the current blocks lane
+                    if (randhPickupSpawn== i) {
+                        HealthPickup health = new HealthPickup(main);
+                        health.pos = new PVector(xPos + ground.getWidth() / 2, yPos - health.getWidth());
+                        main.objects.add(health);
 
                     }
                 }
@@ -215,6 +232,8 @@ public class World {
     public void finalLevel()
     {
         level=1;
+
+
     }
 
     //if the player wants to replay

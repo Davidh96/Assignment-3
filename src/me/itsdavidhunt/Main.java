@@ -103,24 +103,6 @@ public class Main extends PApplet {
         {
             endGame=true;
             playGame=false;
- /*           fill(255);
-            textAlign(CENTER,CENTER);
-            textSize((float)(width*.25));
-            text("FIN",width/2,height/4);
-            textSize((float)(width*.05));
-            //if the player dies
-            if(player.lives<1)
-            {
-                text("You have lost the fight with the dark",width/2,height/2);
-            }
-            //if the player completes game
-            if(world.level==6)
-            {
-                text("You have beaten the darkness",width/2,height/2);
-            }*/
-
-
-
         }
 
 
