@@ -12,7 +12,8 @@ public class World {
     public boolean createWorld;
     public boolean resetWorld;
     private int randEnemySpawn[] = new int[2];
-    private int eNum=0;
+    private int randPickupSpawn[] = new int[2];
+    private int num=0;
 
     public Block ground;
 
@@ -41,16 +42,22 @@ public class World {
                 float laneHeight = main.height / lanes;
 
                 //give the two enemies per horizontal lane random spawn location
-                randEnemySpawn[eNum]=(int)main.random(1, lanes);
-                randEnemySpawn[eNum+1]=(int)main.random(1, lanes);
+                randEnemySpawn[num]=(int)main.random(1, lanes);
+                randEnemySpawn[num+1]=(int)main.random(1, lanes);
                 //if enemy spawn on same location, move them
-                while(randEnemySpawn[eNum+1]==randEnemySpawn[eNum])
+                while(randEnemySpawn[num+1]==randEnemySpawn[num])
                 {
-                    randEnemySpawn[eNum+1]=(int)main.random(1, lanes);
+                    randEnemySpawn[num+1]=(int)main.random(1, lanes);
                 }
 
-                //give pickup per horizontal lane random spawn
-                int randPickupSpawn = (int) main.random(0, lanes);
+                //give the two flares per horizontal lane random spawn location
+                randPickupSpawn[num]=(int)main.random(1, lanes);
+                randPickupSpawn[num+1]=(int)main.random(1, lanes);
+                //if flare spawn on same location, move them
+                while(randPickupSpawn[num+1]==randPickupSpawn[num])
+                {
+                    randPickupSpawn[num+1]=(int)main.random(1, lanes);
+                }
 
                 //go through each vertical lane
                 for (int i = 0; i < lanes; i++) {
@@ -119,14 +126,14 @@ public class World {
                     main.blArray.add(ground);
 
                     //if the enemy random lane number is the current blocks lane
-                    if (randEnemySpawn[eNum]== i || randEnemySpawn[eNum+1] == i) {
+                    if (randEnemySpawn[num]== i || randEnemySpawn[num+1] == i) {
                         Enemy enemy = new Enemy(main);
                         enemy.pos = new PVector(xPos + (ground.getWidth() / 2), yPos - enemy.getWidth());
                         main.objects.add(enemy);
                     }
 
                     //if the pickup random lane number is the current blocks lane
-                    if (randPickupSpawn == i) {
+                    if (randPickupSpawn[num] == i || randPickupSpawn[num+1] == i) {
                         FlarePickup flare = new FlarePickup(main);
                         flare.pos = new PVector(xPos + ground.getWidth() / 2, yPos - flare.getWidth());
                         main.objects.add(flare);
