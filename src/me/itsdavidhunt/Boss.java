@@ -13,6 +13,8 @@ public class Boss {
     PImage img;
     float bWidth;
     boolean moved=true;
+    int health;
+    int maxhealth;
 
     public Boss(Main _main,int headNum)
     {
@@ -23,6 +25,9 @@ public class Boss {
         pos=new PVector((sectorW*headNum)-sectorW/2,randHeight);
         bWidth=(float)(main.width*.08);
         img=main.loadImage("Boss.png");
+
+        health=200;
+        maxhealth=health;
     }
 
     //renders boss head on screen
@@ -30,13 +35,17 @@ public class Boss {
     {
         main.fill(255,0,0);
         main.image(img,pos.x,pos.y,bWidth,bWidth);
+
+        //healthbar
+        main.fill(255,0,0);
+        main.rect(pos.x,pos.y-bWidth/2,main.map(health,0,maxhealth,0,bWidth),10);
+
+        detect();
     }
 
     //moves boss
     public void movement()
     {
-
-
         if(moved==false)
         {
             //moving is used to check if the head has stopped moving
@@ -90,6 +99,12 @@ public class Boss {
             if(main.objects.get(i) instanceof Flare) {
                 //if touching/in flare
                 Flare temp=(Flare)main.objects.get(i);
+
+                float dist = PVector.dist(pos, temp.pos);
+                if(dist<bWidth)
+                {
+                    health--;
+                }
 
             }
         }
