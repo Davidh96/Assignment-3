@@ -12,6 +12,7 @@ public class Flare extends GameObject{
     private float radius;
     private boolean grow=true;
     private int grown=10;
+    private int time;
 
     //these booleans are used so that the flare goes around where the players asks it to, not exactly to the point chosen. This makes the flare physics a little bit more realistic!
     private boolean goLeft=false;
@@ -58,15 +59,20 @@ public class Flare extends GameObject{
         }
 
         //if flare goes off screen, remove it
-        if(pos.y-getWidth()>main.height)
+        if(pos.y-getWidth()>main.height || time>60*20)
         {
-            main.clip.remove(this);
+            main.objects.remove(this);
         }
+
+        time++;
 
         main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)(-fWidth)/2,fWidth*10-radius,fWidth*10-radius);
 
+
         move();
         addGravity(this);
+
+
 
     }
 

@@ -237,7 +237,8 @@ public class World {
         for(int i=0;i<main.heads.size();i++)
         {
             main.heads.get(i).render();
-            //main.heads[i].movement();
+            main.heads.get(i).movement();
+            main.heads.get(i).shoot();
         }
 
         if(main.heads.size()==0)

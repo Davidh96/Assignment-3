@@ -15,6 +15,7 @@ public class Boss {
     boolean moved=true;
     int health;
     int maxhealth;
+    ArrayList<Bullet>bulletArray;
 
     public Boss(Main _main,int headNum)
     {
@@ -26,6 +27,7 @@ public class Boss {
         bWidth=(float)(main.width*.08);
         img=main.loadImage("Boss.png");
 
+        bulletArray=new ArrayList<Bullet>();
         health=100;
         maxhealth=health;
     }
@@ -88,6 +90,31 @@ public class Boss {
             int yPos=(int)main.random((float)(main.height*.1),(float)(main.height*.5));
             goPos=new PVector(xPos,yPos);
             moved=false;
+        }
+    }
+
+    int time=0;
+    public void shoot()
+    {
+        if(time>60*5) {
+            for(int i =0;i<bulletArray.size();i++)
+            {
+                bulletArray.remove(i);
+            }
+            for (int i = 0; i < main.objects.size(); i++) {
+                if (main.objects.get(i) instanceof Player) {
+                    Player temp = (Player) main.objects.get(i);
+                    Bullet bullet = new Bullet(main, pos.x, pos.y, temp.pos.x, temp.pos.y);
+                    bulletArray.add(bullet);
+                }
+            }
+            time=0;
+        }
+        time++;
+
+        for (int i = 0; i < bulletArray.size(); i++) {
+            bulletArray.get(i).render();
+            bulletArray.get(i).move();
         }
     }
 

@@ -71,6 +71,7 @@ public class Menu {
             {
                 main.playGame=!main.playGame;
                 main.endGame=!main.endGame;
+                //main.finalRound=!main.finalRound;
             }
         }
         else
