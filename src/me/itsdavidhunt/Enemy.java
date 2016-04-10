@@ -23,6 +23,7 @@ public class Enemy extends GameObject{
     //renders enemy
     public void render() {
 
+        //render image
         main.image(img, pos.x, pos.y, enWidth, enHeight);
 
         if(inAir==false) {
@@ -48,6 +49,7 @@ public class Enemy extends GameObject{
                     moveDir = -1;
                     //if the enemy has reached the ned of the of the block on the left
                     if (pos.x <= main.blArray.get(i).pos.x) {
+                        //load right sprite
                         img=main.loadImage("EnemyRight.png");
                         goLeft = false;
                     }
@@ -60,8 +62,9 @@ public class Enemy extends GameObject{
                     moveDir = 1;
                     //if the enemy has reached the ned of the of the block on the right
                     if (pos.x + getWidth() >= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth()) {
-                        goLeft = true;
+                        //load left sprite
                         img=main.loadImage("EnemyLeft.png");
+                        goLeft = true;
                     }
                 }
 

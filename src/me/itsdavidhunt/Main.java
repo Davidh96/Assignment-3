@@ -21,7 +21,7 @@ public class Main extends PApplet {
     public boolean fired=false;
     public boolean playGame=false;
     public boolean endGame=false;
-    public boolean finalRound=false;
+    public boolean finalRound=true;
 
     public static void main(String[] args) {
         String[] a = {"MAIN"};

@@ -236,9 +236,8 @@ public class World {
         for(int i=0;i<3;i++)
         {
             main.heads[i].render();
+            main.heads[i].movement();
         }
-
-        //main.boss.render();
     }
 
     //if the player wants to replay

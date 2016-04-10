@@ -18,8 +18,6 @@ public class Player extends GameObject {
 		super(_main);
 		plHeight= (float)(main.height*.06);
 		plWidth= (float)(main.width*.03);
-		//plHeight= (float)(main.height*.03);
-		//plWidth= (float)(main.height*.02);
 		pos=new PVector(main.width/2,main.height/2-plHeight);
 		movement=new PVector(5,0);
 		img= main.loadImage("playerRight.png");
@@ -29,9 +27,8 @@ public class Player extends GameObject {
 	//displays the player on screen
 	public void render()
 	{
+		//render image
 		main.image(img, pos.x, pos.y,plWidth,-plHeight);
-		//main.fill(255);
-		//main.rect(pos.x, pos.y,plWidth,-plHeight);
 
 		addGravity(this);
 
@@ -97,9 +94,8 @@ public class Player extends GameObject {
 	//allows player to drop down through blocks
 	private void drop()
 	{
-
+		//prevents player from dropping through blocks at high speed
 		if(inAir==false) {
-			main.println(inAir);
 			pos.y = pos.y + main.blArray.get(0).getHeight();
 		}
 	}
