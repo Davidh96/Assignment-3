@@ -16,6 +16,7 @@ public class Main extends PApplet {
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
     public ArrayList<Block>blArray=new ArrayList<Block>();
     public ArrayList<Boss>heads=new ArrayList<Boss>();
+    ArrayList<Bullet>bulletArray=new ArrayList<Bullet>();
 
     public boolean fired=false;
     public boolean playGame=false;
@@ -83,6 +84,11 @@ public class Main extends PApplet {
                 {
                     objects.get(i).render();
                 }
+            }
+
+            for (int i = 0; i < bulletArray.size(); i++) {
+                bulletArray.get(i).render();
+                bulletArray.get(i).move();
             }
 
             player.flareGunSetup();
