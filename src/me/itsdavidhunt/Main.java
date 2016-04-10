@@ -15,13 +15,14 @@ public class Main extends PApplet {
     public ArrayList<Flare> clip=new ArrayList<Flare>();
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
     public ArrayList<Block>blArray=new ArrayList<Block>();
+    public ArrayList<Boss>heads=new ArrayList<Boss>();
 
-    public Boss heads[]=new Boss[3];
+    //public Boss heads[]=new Boss[3];
 
     public boolean fired=false;
     public boolean playGame=false;
     public boolean endGame=false;
-    public boolean finalRound=true;
+    public boolean finalRound=false;
 
     public static void main(String[] args) {
         String[] a = {"MAIN"};
@@ -42,7 +43,8 @@ public class Main extends PApplet {
 
         for(int i=0;i<3;i++)
         {
-            heads[i]=new Boss(this,i+1);
+            Boss head = new Boss(this,i+1);
+            heads.add(head);
         }
 
         HUD=new playerHUD(this);
@@ -53,8 +55,6 @@ public class Main extends PApplet {
 
     public void draw() {
     	background(0);
-
-
 
         if(!playGame && endGame==false) {
             menu.display();
@@ -74,8 +74,6 @@ public class Main extends PApplet {
     //This method will control all the classes for playing the game
     public void play()
     {
-
-
         if(world.level<5 && player.lives>0) {
             player.move();
             HUD.display();
@@ -110,10 +108,9 @@ public class Main extends PApplet {
         if(finalRound)
         {
             world.finalLevel();
-            //world.level++;
         }
         //displays end screen
-        else if(world.level==6 || player.lives<1)
+        if(player.lives<1)
         {
             endGame=true;
             playGame=false;

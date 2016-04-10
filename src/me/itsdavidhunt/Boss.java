@@ -26,7 +26,7 @@ public class Boss {
         bWidth=(float)(main.width*.08);
         img=main.loadImage("Boss.png");
 
-        health=200;
+        health=100;
         maxhealth=health;
     }
 
@@ -104,6 +104,11 @@ public class Boss {
                 if(dist<bWidth)
                 {
                     health--;
+
+                    if(health<1)
+                    {
+                        main.heads.remove(this);
+                    }
                 }
 
             }

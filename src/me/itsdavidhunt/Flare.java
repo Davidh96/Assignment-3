@@ -9,7 +9,7 @@ public class Flare extends GameObject{
     public PVector pDest;
     private float fWidth;
     public float speed;
-    private float radius=0;
+    private float radius;
     private boolean grow=true;
     private int grown=10;
 

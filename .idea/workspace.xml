@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a06b043-71b5-4038-974f-bdd85eb72df8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Boss.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Boss.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Flare.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Flare.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Main.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/World.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/World.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Main.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/World.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/World.java" />
     </list>
     <ignored path="Flare.iws" />
@@ -29,9 +36,10 @@
         <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#470#476#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,16 +48,9 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
+            <state relative-caret-position="367">
               <caret line="96" column="68" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
-              <folding>
-                <element signature="e#1316#1317#0" expanded="false" />
-                <element signature="e#1338#1339#0" expanded="false" />
-                <element signature="e#1384#1385#0" expanded="false" />
-                <element signature="e#1405#1406#0" expanded="false" />
-                <element signature="e#1450#1451#0" expanded="false" />
-                <element signature="e#1486#1487#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,10 +65,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Flare.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Enemy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="289">
               <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="41" />
               <folding />
             </state>
@@ -90,11 +101,11 @@
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="238" selection-end-column="14" />
+            <state relative-caret-position="-806">
+              <caret line="185" column="39" selection-start-line="185" selection-start-column="39" selection-end-line="185" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1460305233281" expanded="true" signature="2956:3550" placeholder="{...}" />
+                <marker date="1460308228616" expanded="true" signature="2958:3552" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -103,8 +114,8 @@
       <file leaf-file-name="Boss.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
+            <state relative-caret-position="27">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,16 +143,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlarePickup.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -164,7 +165,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/GameObject.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Block.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Exit.java" />
@@ -174,9 +174,10 @@
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Player.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Main.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/World.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Main.java" />
       </list>
     </option>
   </component>
@@ -637,14 +638,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1384#1385#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1450#1451#0" expanded="false" />
-            <element signature="e#1486#1487#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -692,6 +686,7 @@
           <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#470#476#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -708,14 +703,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1384#1385#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1450#1451#0" expanded="false" />
-            <element signature="e#1486#1487#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -763,6 +751,7 @@
           <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#470#476#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -779,14 +768,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1384#1385#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1450#1451#0" expanded="false" />
-            <element signature="e#1486#1487#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -834,6 +816,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#470#476#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,14 +833,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
-          <folding>
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1384#1385#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1450#1451#0" expanded="false" />
-            <element signature="e#1486#1487#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -897,6 +873,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#470#476#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -913,14 +890,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1384#1385#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1450#1451#0" expanded="false" />
-            <element signature="e#1486#1487#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -950,14 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="33" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1020,47 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="96" column="68" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
-          <folding>
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1384#1385#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1450#1451#0" expanded="false" />
-            <element signature="e#1486#1487#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -1069,23 +990,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="96" column="68" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
+        <state relative-caret-position="27">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/World.java">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="238" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1460305233281" expanded="true" signature="2956:3550" placeholder="{...}" />
+            <element signature="e#470#476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-806">
+          <caret line="185" column="39" selection-start-line="185" selection-start-column="39" selection-end-line="185" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1460308228616" expanded="true" signature="2958:3552" placeholder="{...}" />
           </folding>
         </state>
       </provider>

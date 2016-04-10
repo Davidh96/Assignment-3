@@ -32,7 +32,7 @@ public class World {
         if(createWorld) {
 
             //gives player 3 flares each level
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 200; i++) {
                 Flare flare = new Flare(main);
                 main.clip.add(flare);
             }
@@ -185,6 +185,7 @@ public class World {
             {
                 main.objects.remove(i);
             }
+
             //remove all flares collected by player
             for(int i=0;i<main.clip.size();i++)
             {
@@ -192,7 +193,7 @@ public class World {
             }
 
             //once all has been removed
-            if(main.blArray.size()<1 && main.objects.size()<1 && main.clip.size()<1)
+            if(main.blArray.size()<1 && main.objects.size()<1)
             {
                 //create new world
                 createWorld=true;
@@ -233,10 +234,17 @@ public class World {
     {
         level=1;
 
-        for(int i=0;i<3;i++)
+        for(int i=0;i<main.heads.size();i++)
         {
-            main.heads[i].render();
+            main.heads.get(i).render();
             //main.heads[i].movement();
+        }
+
+        if(main.heads.size()==0)
+        {
+            main.finalRound=false;
+            main.endGame=true;
+            main.playGame=false;
         }
     }
 
