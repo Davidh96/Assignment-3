@@ -16,19 +16,12 @@ public class Enemy extends GameObject{
 
         enHeight= -(float)(main.height*.06);
         enWidth= (float)(main.width*.03);
+        img=main.loadImage("EnemyLeft.png");
 
     }
 
     //renders enemy
     public void render() {
-
-        if(goLeft) {
-            img=main.loadImage("EnemyLeft.png");
-        }
-        else
-        {
-            img=main.loadImage("EnemyRight.png");
-        }
 
         main.image(img, pos.x, pos.y, enWidth, enHeight);
 
@@ -50,23 +43,25 @@ public class Enemy extends GameObject{
             if(main.blArray.get(i).pos.x<pos.x+getWidth() && main.blArray.get(i).pos.x+main.blArray.get(i).getWidth()>pos.x ) {
                 //if the current position of enemy is greater than the left edge of the block and they have reached the right end of the block
                 if (pos.x >= main.blArray.get(i).pos.x && goLeft) {
+
                     //move left
                     moveDir = -1;
                     //if the enemy has reached the ned of the of the block on the left
                     if (pos.x <= main.blArray.get(i).pos.x) {
-
+                        img=main.loadImage("EnemyRight.png");
                         goLeft = false;
                     }
                 }
 
                 //if the current position of enemy is less than the right edge of the block and they have reached the left end of the block
                 if(pos.x <= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth() && goLeft == false) {
-                    //move right
 
+                    //move right
                     moveDir = 1;
                     //if the enemy has reached the ned of the of the block on the right
                     if (pos.x + getWidth() >= main.blArray.get(i).pos.x + main.blArray.get(i).getWidth()) {
                         goLeft = true;
+                        img=main.loadImage("EnemyLeft.png");
                     }
                 }
 
