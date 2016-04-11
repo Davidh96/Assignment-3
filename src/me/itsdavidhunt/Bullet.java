@@ -8,6 +8,7 @@ public class Bullet {
     PVector pos;
     PVector goPos;
     float bWidth;
+    int time=0;
 
     public Bullet(Main _main,float xPos,float yPos,float goXpos,float goYpos)
     {
@@ -17,9 +18,18 @@ public class Bullet {
         bWidth=(float)(main.width*.01);
     }
 
+    //renders bullet on screen
     public void render() {
-        main.fill(255);
+        main.fill(255,0,0);
+        main.stroke(255,0,0);
         main.rect(pos.x, pos.y, bWidth, bWidth);
+
+        if(time>60*5)
+        {
+            main.bulletArray.remove(this);
+        }
+
+        time++;
 
         detect();
 
@@ -30,6 +40,7 @@ public class Bullet {
     {
         for(int i=0;i<main.objects.size();i++)
         {
+            //if player
             if(main.objects.get(i) instanceof Player)
             {
                 Player temp=(Player)main.objects.get(i);
@@ -41,14 +52,15 @@ public class Bullet {
                     if(pos.y>temp.pos.y-temp.getHeight() && pos.y+getWidth()<temp.pos.y)
                     {
                         //take away life
-                        temp.lives--;
-                        main.bulletArray.remove(this);
+                        //temp.lives--;
+                        //main.bulletArray.remove(this);
                     }
                 }
             }
         }
     }
 
+    //moves the bullet
     public void move()
     {
         if(pos.x<goPos.x) {
@@ -70,6 +82,7 @@ public class Bullet {
         }
     }
 
+    //returns the width of a bullet
     public float getWidth()
     {
         return bWidth;

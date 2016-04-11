@@ -69,9 +69,9 @@ public class Menu {
 
             if(main.mousePressed)
             {
-                main.playGame=!main.playGame;
-                main.endGame=!main.endGame;
-                //main.finalRound=!main.finalRound;
+                main.playGame=true;
+                main.endGame=false;
+                main.finalRound=false;
             }
         }
         else
@@ -79,5 +79,6 @@ public class Menu {
             color=255;
         }
     }
+
 
 }

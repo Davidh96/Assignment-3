@@ -9,7 +9,7 @@ public class Player extends GameObject {
 	private float plHeight;
 	private float plWidth;
 	private float jSpeed=(float).006;
-	public int lives=300;
+	public int lives=3;
 	private PImage img;
 
 	//creates player

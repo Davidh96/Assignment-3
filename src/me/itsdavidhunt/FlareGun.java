@@ -5,14 +5,15 @@ import processing.core.*;
 
 public class FlareGun extends GameObject {
 
-    private float fgWidth= (float)(main.height*.01);
+    private float fgWidth= (float)(main.height*.03);
+    private PImage img;
     //private PImage img;
 
     public FlareGun(Main _main)
     {
         super(_main);
-        pos=new PVector(main.player.pos.x,main.player.pos.y);
-        //img=main.loadImage("FlareGun.jpg");
+        pos=new PVector(main.player.pos.x+main.player.getWidth()/2,main.player.pos.y);
+        img=main.loadImage("GunLeft.png");
 
     }
 
@@ -20,7 +21,8 @@ public class FlareGun extends GameObject {
     public void render()
     {
         main.fill(255,0,0);
-        main.rect(pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
+        //main.rect(pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
+        main.image(img,pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
 
         if(main.mousePressed)
         {

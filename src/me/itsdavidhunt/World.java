@@ -192,6 +192,11 @@ public class World {
                 main.clip.remove(i);
             }
 
+            for(int i=0;i<main.bulletArray.size();i++)
+            {
+                main.bulletArray.remove(i);
+            }
+
             //once all has been removed
             if(main.blArray.size()<1 && main.objects.size()<1)
             {
@@ -229,24 +234,35 @@ public class World {
         }
     }
 
+    private boolean initial=true;
     //creates final level
     public void finalLevel()
     {
         level=1;
 
-        for(int i=0;i<main.heads.size();i++)
-        {
-            main.heads.get(i).render();
-            main.heads.get(i).movement();
-            main.heads.get(i).shoot();
+        if(initial) {
+            for (int i = 0; i < 3; i++) {
+                Boss head = new Boss(main, i + 1);
+                main.heads.add(head);
+            }
+            initial=false;
         }
 
         if(main.heads.size()==0)
         {
-            main.finalRound=false;
             main.endGame=true;
+
+            main.finalRound=false;
             main.playGame=false;
         }
+
+        for(int i=0;i<main.heads.size();i++)
+        {
+            main.heads.get(i).render();
+            //main.heads.get(i).movement();
+            //main.heads.get(i).shoot();
+        }
+
     }
 
     //if the player wants to replay
@@ -256,6 +272,35 @@ public class World {
         level=1;
         main.player.lives=3;
         //create a new world
-        resetWorld=true;
+
+        //remove all blocks
+        for(int i=0;i<main.blArray.size();i++)
+        {
+            main.blArray.remove(i);
+        }
+        //remove all objects(player,flares,enemies etc..)
+        for(int i=0;i<main.objects.size();i++)
+        {
+            main.objects.remove(i);
+        }
+
+        //remove all flares collected by player
+        for(int i=0;i<main.clip.size();i++)
+        {
+            main.clip.remove(i);
+        }
+
+        for(int i=0;i<main.bulletArray.size();i++)
+        {
+            main.bulletArray.remove(i);
+        }
+
+        //once all has been removed
+        if(main.blArray.size()<1 && main.objects.size()<1)
+        {
+            //create new world
+            createWorld=true;
+            resetWorld=false;
+        }
     }
 }

@@ -21,7 +21,7 @@ public class Main extends PApplet {
     public boolean fired=false;
     public boolean playGame=false;
     public boolean endGame=false;
-    public boolean finalRound=true;
+    public boolean finalRound=false;
 
     public static void main(String[] args) {
         String[] a = {"MAIN"};
@@ -40,12 +40,6 @@ public class Main extends PApplet {
 
         player=new Player(this);
 
-        for(int i=0;i<3;i++)
-        {
-            Boss head = new Boss(this,i+1);
-            heads.add(head);
-        }
-
         HUD=new playerHUD(this);
 
         world=new World(this);
@@ -55,15 +49,20 @@ public class Main extends PApplet {
     public void draw() {
     	background(0);
         //println(finalRound);
-        if(!playGame && endGame==false) {
+        //finalRound=false;
+        //endGame=true;
+        //playGame=false;
+
+        if(!playGame && endGame==false ) {
             menu.display();
             menu.interact();
         }
         if(playGame) {
             play();
         }
-        if(!playGame && endGame)
+        if(endGame && playGame==false)
         {
+            world=new World(this);
             world.retry();
             menu.endScreen();
             menu.interact();
@@ -74,7 +73,7 @@ public class Main extends PApplet {
     //This method will control all the classes for playing the game
     public void play()
     {
-        if(world.level<5 && player.lives>0 && world.resetWorld==false) {
+        if(world.level<5 && player.lives>0) {
             player.move();
             HUD.display();
 
@@ -86,22 +85,23 @@ public class Main extends PApplet {
                 }
             }
 
+            /*//renders bullets and moves them
             for (int i = 0; i < bulletArray.size(); i++) {
                 bulletArray.get(i).render();
                 bulletArray.get(i).move();
-            }
+            }*/
 
             player.flareGunSetup();
 
             world.generate();
 
             //render enemies
-            for (int i = 0; i < objects.size(); i++) {
+           /* for (int i = 0; i < objects.size(); i++) {
                 if((objects.get(i) instanceof Enemy))
                 {
                     objects.get(i).render();
                 }
-            }
+            }*/
 
             player.flareAim();
         }
