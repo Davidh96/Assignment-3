@@ -11,6 +11,7 @@ public class World {
     public int level;
     public boolean createWorld;
     public boolean resetWorld;
+    public boolean initial;
     private int randEnemySpawn[] = new int[2];
     private int randfPickupSpawn[] = new int[2];
     private int randhPickupSpawn;
@@ -229,11 +230,11 @@ public class World {
         }
     }
 
-    private boolean initial=true;
     //creates final level
     public void finalLevel()
     {
         level=1;
+        //main.println("heyo");
 
         if(initial) {
             for (int i = 0; i < 3; i++) {

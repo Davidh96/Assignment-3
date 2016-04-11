@@ -69,9 +69,11 @@ public class Menu {
 
             if(main.mousePressed)
             {
-                main.playGame=true;
                 main.endGame=false;
                 main.finalRound=false;
+                main.world.initial=true;
+                main.playGame=true;
+
             }
         }
         else

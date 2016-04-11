@@ -96,6 +96,7 @@ public class Main extends PApplet {
         }
         if(world.level>4)
         {
+            println(world.level);
             finalRound=true;
         }
         //load final level
