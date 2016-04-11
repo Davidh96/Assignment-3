@@ -9,20 +9,24 @@ public class Bullet {
     public PVector goPos;
     private float bWidth;
     private int time=0;
+    private PImage img;
 
     public Bullet(Main _main,float xPos,float yPos,float goXpos,float goYpos)
     {
         main=_main;
         pos=new PVector(xPos,yPos);
         goPos=new PVector(goXpos,goYpos);
-        bWidth=(float)(main.width*.01);
+        bWidth=(float)(main.width*.03);
+        img=main.loadImage("Bullet.png");
     }
 
     //renders bullet on screen
     public void render() {
         main.fill(255,0,0);
         main.stroke(255,0,0);
-        main.rect(pos.x, pos.y, bWidth, bWidth);
+        //main.rect(pos.x, pos.y, bWidth, bWidth);
+
+        main.image(img,pos.x,pos.y,bWidth,bWidth);
 
         if(time>60*8)
         {
