@@ -48,10 +48,6 @@ public class Main extends PApplet {
 
     public void draw() {
     	background(0);
-        //println(finalRound);
-        //finalRound=false;
-        //endGame=true;
-        //playGame=false;
 
         if(!playGame && endGame==false ) {
             menu.display();
@@ -62,10 +58,10 @@ public class Main extends PApplet {
         }
         if(endGame && playGame==false)
         {
-            world=new World(this);
             world.retry();
             menu.endScreen();
             menu.interact();
+
         }
 
     }    
@@ -96,12 +92,12 @@ public class Main extends PApplet {
             world.generate();
 
             //render enemies
-           /* for (int i = 0; i < objects.size(); i++) {
+            for (int i = 0; i < objects.size(); i++) {
                 if((objects.get(i) instanceof Enemy))
                 {
                     objects.get(i).render();
                 }
-            }*/
+            }
 
             player.flareAim();
         }
