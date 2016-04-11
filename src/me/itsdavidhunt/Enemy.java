@@ -11,6 +11,7 @@ public class Enemy extends GameObject{
     private int moveDir=0;
     private PImage img;
 
+
     public Enemy(Main _main) {
         super(_main);
 

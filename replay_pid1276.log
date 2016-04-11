@@ -1,0 +1,58 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 442 ciObject found
+ciMethod java/lang/Object <init> ()V 4097 1 522252 0 0
+ciMethod java/lang/Object hashCode ()I 2049 1 256 0 -1
+ciMethod java/lang/Object equals (Ljava/lang/Object;)Z 4097 1 10027 0 -1
+ciMethod java/lang/Object clone ()Ljava/lang/Object; 2049 1 256 0 -1
+ciMethod java/lang/String <init> ([CII)V 3393 1 5991 0 -1
+ciMethod java/lang/String length ()I 4097 1 83023 0 0
+ciMethod java/lang/String getChars (II[CI)V 2121 1 5406 0 320
+ciMethod java/lang/String equals (Ljava/lang/Object;)Z 2049 19537 19210 0 -1
+ciMethod java/lang/String hashCode ()I 2833 32769 1090 0 288
+ciMethod java/lang/String indexOf (I)I 3385 1 23441 0 -1
+ciMethod java/lang/String lastIndexOf (I)I 2057 1 13315 0 -1
+ciMethod java/lang/String substring (I)Ljava/lang/String; 3097 1 5507 0 -1
+ciMethod java/lang/String substring (II)Ljava/lang/String; 3105 1 5510 0 -1
+ciMethod java/lang/String toLowerCase ()Ljava/lang/String; 3833 1 19827 0 -1
+ciMethod java/lang/System currentTimeMillis ()J 2049 1 256 0 -1
+ciMethod java/lang/System nanoTime ()J 3073 1 384 0 -1
+ciMethod java/lang/System arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V 7169 1 896 0 -1
+ciMethod java/lang/System exit (I)V 0 0 1 0 -1
+ciMethod java/lang/Throwable printStackTrace ()V 0 0 1 0 -1
+ciMethod java/util/Map isEmpty ()Z 0 0 1 0 -1
+ciMethod java/util/Map put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/util/Map entrySet ()Ljava/util/Set; 0 0 1 0 -1
+ciMethod java/lang/AbstractStringBuilder <init> (I)V 889 1 54608 0 -1
+ciMethod java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; 1609 1 5332 0 -1
+ciMethod java/lang/AbstractStringBuilder append (I)Ljava/lang/AbstractStringBuilder; 1 1 5122 0 -1
+ciMethod java/lang/StringBuilder <init> ()V 881 1 34606 0 0
+ciMethod java/lang/StringBuilder <init> (Ljava/lang/String;)V 2049 1 18451 0 -1
+ciMethod java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder; 1609 1 128734 0 928
+ciMethod java/lang/StringBuilder append (I)Ljava/lang/StringBuilder; 1 1 10181 0 0
+ciMethod java/lang/StringBuilder toString ()Ljava/lang/String; 881 1 52732 0 800
+ciMethod java/lang/Float valueOf (F)Ljava/lang/Float; 2049 1 14454 0 0
+ciMethod java/lang/Float <init> (F)V 2049 1 15412 0 0
+ciMethod java/lang/Number <init> ()V 3481 1 17185 0 0
+ciMethod java/util/Map$Entry getKey ()Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/util/Map$Entry getValue ()Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/util/Set iterator ()Ljava/util/Iterator; 0 0 1 0 -1
+ciMethod java/util/AbstractMap <init> ()V 689 1 25697 0 0
+ciMethod java/util/Iterator hasNext ()Z 0 0 1 0 -1
+ciMethod java/util/Iterator next ()Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/util/ArrayList size ()I 1329 1 166 0 0
+ciMethod java/util/ArrayList elementData (I)Ljava/lang/Object; 2193 1 377979 0 96
+ciMethod java/util/ArrayList get (I)Ljava/lang/Object; 2193 1 377188 0 128
+ciMethod java/util/ArrayList rangeCheck (I)V 2193 1 377979 0 64
+ciMethod java/util/HashMap hash (Ljava/lang/Object;)I 2073 1 23111 0 160
+ciMethod java/util/HashMap <init> ()V 321 1 7727 0 0
+ciMethod java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object; 2137 1 5389 0 1280
+ciMethod java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node; 2057 105 5382 0 1088
+ciMethod java/util/HashMap put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 2057 1 13226 0 192
+ciMethod java/util/HashMap putVal (ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; 2057 113 5386 0 2848
+ciMethod java/util/HashMap resize ()[Ljava/util/HashMap$Node; 241 1593 5151 0 -1
+ciMethod java/util/HashMap treeifyBin ([Ljava/util/HashMap$Node;I)V 0 0 1 0 -1
+ciMethod java/util/HashMap newNode (ILjava/lang/Object;Ljava/lang/Object;Ljava/util/HashMap$Node;)Ljava/util/HashMap$Node; 3353 1 4772 0 -1
+ciMethod java/util/HashMap afterNodeAccess (Ljava/util/HashMap$Node;)V 2073 1 568 0 -1
+ciMethod java/util/HashMap afterNodeInsertion (Z)V 3353 1 1610 0

@@ -192,11 +192,6 @@ public class World {
                 main.clip.remove(i);
             }
 
-            for(int i=0;i<main.bulletArray.size();i++)
-            {
-                main.bulletArray.remove(i);
-            }
-
             //once all has been removed
             if(main.blArray.size()<1 && main.objects.size()<1)
             {
@@ -256,12 +251,12 @@ public class World {
             main.playGame=false;
         }
 
-        for(int i=0;i<main.heads.size();i++)
-        {
+        for (int i = 0; i < main.heads.size(); i++) {
             main.heads.get(i).render();
             //main.heads.get(i).movement();
             //main.heads.get(i).shoot();
         }
+
 
     }
 
@@ -288,11 +283,6 @@ public class World {
         for(int i=0;i<main.clip.size();i++)
         {
             main.clip.remove(i);
-        }
-
-        for(int i=0;i<main.bulletArray.size();i++)
-        {
-            main.bulletArray.remove(i);
         }
 
         //once all has been removed

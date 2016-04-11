@@ -16,7 +16,6 @@ public class Main extends PApplet {
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
     public ArrayList<Block>blArray=new ArrayList<Block>();
     public ArrayList<Boss>heads=new ArrayList<Boss>();
-    ArrayList<Bullet>bulletArray=new ArrayList<Bullet>();
 
     public boolean fired=false;
     public boolean playGame=false;
@@ -81,23 +80,17 @@ public class Main extends PApplet {
                 }
             }
 
-            /*//renders bullets and moves them
-            for (int i = 0; i < bulletArray.size(); i++) {
-                bulletArray.get(i).render();
-                bulletArray.get(i).move();
-            }*/
-
             player.flareGunSetup();
 
             world.generate();
 
-            //render enemies
+            /*//render enemies
             for (int i = 0; i < objects.size(); i++) {
                 if((objects.get(i) instanceof Enemy))
                 {
                     objects.get(i).render();
                 }
-            }
+            }*/
 
             player.flareAim();
         }
