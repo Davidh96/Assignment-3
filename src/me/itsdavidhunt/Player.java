@@ -50,6 +50,9 @@ public class Player extends GameObject {
 			if(main.key=='d')
 			{
 				img= main.loadImage("playerRight.png");
+				//switch the side the flare gun appears on
+				main.gun.img=main.loadImage("GunRight.png");
+				main.gun.switchSide=0;
 				pos.add(movement);
 			}
 
@@ -57,6 +60,9 @@ public class Player extends GameObject {
 			if(main.key=='a')
 			{
 				img= main.loadImage("playerLeft.png");
+				//switch the side the flare gun appears on
+				main.gun.img=main.loadImage("GunLeft.png");
+				main.gun.switchSide=-getWidth()/2;
 				pos.sub(movement);
 			}
 
@@ -110,7 +116,6 @@ public class Player extends GameObject {
 	//sets up flaregun
 	public void flareGunSetup()
 	{
-		main.gun=new FlareGun(main);
 		main.gun.render();
 	}
 

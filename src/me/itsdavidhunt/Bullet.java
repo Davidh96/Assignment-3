@@ -5,10 +5,10 @@ import processing.core.*;
 public class Bullet {
 
     Main main;
-    PVector pos;
-    PVector goPos;
-    float bWidth;
-    int time=0;
+    public PVector pos;
+    public PVector goPos;
+    private float bWidth;
+    private int time=0;
 
     public Bullet(Main _main,float xPos,float yPos,float goXpos,float goYpos)
     {
@@ -24,13 +24,17 @@ public class Bullet {
         main.stroke(255,0,0);
         main.rect(pos.x, pos.y, bWidth, bWidth);
 
-        //bulletArray.remove(this);
-
+        if(time>60*8)
+        {
+            FlarePickup flare=new  FlarePickup(main);
+            flare.pos=new PVector(pos.x,pos.y);
+            main.objects.add(flare);
+            main.bulletArray.remove(this);
+        }
         time++;
 
         detect();
-
-
+        move();
     }
 
     //detects if touching player
@@ -50,8 +54,8 @@ public class Bullet {
                     if(pos.y>temp.pos.y-temp.getHeight() && pos.y+getWidth()<temp.pos.y)
                     {
                         //take away life
-                        //temp.lives--;
-                        //main.bulletArray.remove(this);
+                        temp.lives--;
+                        main.bulletArray.remove(this);
                     }
                 }
             }

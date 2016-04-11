@@ -15,7 +15,6 @@ public class Boss {
     boolean moved=true;
     int health;
     int maxhealth;
-    private ArrayList<Bullet>bulletArray=new ArrayList<Bullet>();
 
     public Boss(Main _main,int headNum)
     {
@@ -100,18 +99,17 @@ public class Boss {
         //every 5 seconds
         if(time==60*5) {
             //create new bullet
-            Bullet bullet = new Bullet(main, pos.x, pos.y, main.player.pos.x, main.player.pos.y);
+            Bullet bullet = new Bullet(main, pos.x, pos.y, main.player.pos.x, main.player.pos.y-main.player.getHeight()/2);
             //add to boss clip
-            bulletArray.add(bullet);
+            main.bulletArray.add(bullet);
             time=0;
         }
         time++;
 
         //renders bullets
-        for(int i=0;i<bulletArray.size();i++)
+        for(int i=0;i<main.bulletArray.size();i++)
         {
-            bulletArray.get(i).render();
-            bulletArray.get(i).move();
+            main.bulletArray.get(i).render();
         }
 
     }

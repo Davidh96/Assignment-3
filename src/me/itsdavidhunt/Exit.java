@@ -7,16 +7,21 @@ public class Exit {
 
     Main main;
 
-    PVector pos;
+    public PVector pos;
+    private float eHeight;
+    private float eWidth;
 
     public Exit(Main _main) {
         main=_main;
+        eHeight=(float)(main.height*.06);
+        eWidth=(float)(main.width*.03);
     }
 
     public void render()
     {
-        main.fill(255,0,0);
-        main.rect(pos.x,pos.y,-20,-20);
+        main.fill(255);
+        main.stroke(255);
+        main.rect(pos.x,pos.y,-eWidth,-eHeight);
     }
 
     //detects if player touching exit
@@ -45,7 +50,12 @@ public class Exit {
     //returns width
     public float getWidth()
     {
-        return -20;
+        return -eWidth;
+    }
+
+    public float getHeight()
+    {
+        return eHeight;
     }
 
 }

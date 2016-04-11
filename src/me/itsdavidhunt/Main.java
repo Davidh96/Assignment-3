@@ -16,6 +16,7 @@ public class Main extends PApplet {
     public ArrayList<GameObject>objects=new ArrayList<GameObject>();
     public ArrayList<Block>blArray=new ArrayList<Block>();
     public ArrayList<Boss>heads=new ArrayList<Boss>();
+    public ArrayList<Bullet>bulletArray=new ArrayList<Bullet>();
 
     public boolean fired=false;
     public boolean playGame=false;
@@ -42,6 +43,8 @@ public class Main extends PApplet {
         HUD=new playerHUD(this);
 
         world=new World(this);
+
+        gun=new FlareGun(this);
     }
     
 

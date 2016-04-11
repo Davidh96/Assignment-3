@@ -173,6 +173,36 @@ public class World {
         //sets player spawn location
         main.player.spawnPos=new PVector(main.blArray.get(0).pos.x+(main.blArray.get(0).getWidth()/2),main.blArray.get(0).pos.y);
 
+        if(main.finalRound==false) {
+
+            //used to hold index of highest block
+            int highestBlock = 0;
+
+            //get the highest block index
+            for (int i = 0; i < main.blArray.size(); i++) {
+                //if current highest is smaller than this other block, update highest
+                if (main.blArray.get(i).pos.y < main.blArray.get(highestBlock).pos.y) {
+                    highestBlock = i;
+                }
+            }
+
+
+            //creates exit when there are more than 9 block created
+            //prevents game from crashing when resetting world
+            if (main.blArray.size() > 9) {
+                Exit exit = new Exit(main);
+                exit.pos = new PVector(main.blArray.get(highestBlock).pos.x + (main.blArray.get(highestBlock).getWidth()), main.blArray.get(highestBlock).pos.y);
+                exit.render();
+                exit.detect();
+            }
+        }
+
+        //render all blocks
+        for(int i=0;i<main.blArray.size();i++)
+        {
+            main.blArray.get(i).render();
+        }
+
         //if the world needs to be reset(due to player progressing to new level)
         if(resetWorld)
         {
@@ -202,32 +232,6 @@ public class World {
             }
         }
 
-        //used to hold index of highest block
-        int highestBlock=0;
-
-        //get the highest block index
-        for(int i=0;i<main.blArray.size();i++)
-        {
-            //if current highest is smaller than this other block, update highest
-            if (main.blArray.get(i).pos.y < main.blArray.get(highestBlock).pos.y) {
-                highestBlock = i;
-            }
-        }
-
-        //creates exit when there are more than 9 block created
-        //prevents game from crashing when resetting world
-        if(main.blArray.size()>9) {
-            Exit exit = new Exit(main);
-            exit.pos = new PVector(main.blArray.get(highestBlock).pos.x + (main.blArray.get(highestBlock).getWidth()), main.blArray.get(highestBlock).pos.y);
-            exit.render();
-            exit.detect();
-        }
-
-        //render all blocks
-        for(int i=0;i<main.blArray.size();i++)
-        {
-                main.blArray.get(i).render();
-        }
     }
 
     //creates final level
