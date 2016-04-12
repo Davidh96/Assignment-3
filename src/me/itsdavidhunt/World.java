@@ -32,8 +32,8 @@ public class World {
         //if new world needs to be created
         if(createWorld) {
 
-            //gives player 3 flares each level
-            for (int i = 0; i < 200; i++) {
+            //gives player 5 flares each level
+            for (int i = 0; i < 5; i++) {
                 Flare flare = new Flare(main);
                 main.clip.add(flare);
             }
@@ -89,7 +89,7 @@ public class World {
                         if(i==0)
                         {
                             //spawn player
-                            main.player.pos=new PVector( laneWidth/2,rand2 * laneHeight);
+                            main.player.pos=new PVector( main.player.getWidth(),rand2 * laneHeight);
                             main.objects.add(main.player);
                         }
                         //makes any above block in same lane closer to this block
@@ -171,15 +171,15 @@ public class World {
         }
 
         //sets player spawn location
-        main.player.spawnPos=new PVector(main.blArray.get(0).pos.x+(main.blArray.get(0).getWidth()/2),main.blArray.get(0).pos.y);
+        main.player.spawnPos=new PVector(main.blArray.get(0).pos.x,main.blArray.get(0).pos.y);
 
         if(main.finalRound==false) {
 
             //used to hold index of highest block
-            int highestBlock = 0;
+            int highestBlock = 5;
 
             //get the highest block index
-            for (int i = 0; i < main.blArray.size(); i++) {
+            for (int i = 5; i < main.blArray.size(); i++) {
                 //if current highest is smaller than this other block, update highest
                 if (main.blArray.get(i).pos.y < main.blArray.get(highestBlock).pos.y) {
                     highestBlock = i;
@@ -235,12 +235,12 @@ public class World {
         for (int i = 0; i < main.heads.size(); i++) {
             main.heads.get(i).render();
             //main.heads.get(i).movement();
-            //main.heads.get(i).shoot();
         }
 
 
     }
 
+    //sets up the game for when a player wants to retry
     public void retry()
     {
         //initialise the level and health
@@ -249,7 +249,7 @@ public class World {
         reset();
     }
 
-    //if the player wants to replay
+    //removes objects
     private void reset()
     {
         //remove all blocks
@@ -261,12 +261,6 @@ public class World {
         for(int i=0;i<main.objects.size();i++)
         {
             main.objects.remove(i);
-        }
-
-        //remove all flares collected by player
-        for(int i=0;i<main.clip.size();i++)
-        {
-            main.clip.remove(i);
         }
 
         //once all has been removed

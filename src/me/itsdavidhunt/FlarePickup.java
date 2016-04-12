@@ -30,12 +30,17 @@ public class FlarePickup extends GameObject {
             if(main.objects.get(i) instanceof Player) {
                 //if touching/in player
                 if (pos.y <= main.objects.get(i).pos.y && pos.y + (fWidth / 4) > main.objects.get(i).pos.y && pos.x <= main.objects.get(i).pos.x + main.objects.get(i).getWidth() && pos.x + fWidth >= main.objects.get(i).pos.x) {
+                    applyTo();
                     main.objects.remove(this);
-                    Flare flare = new Flare(main);
-                    main.clip.add(flare);
                 }
             }
         }
+    }
+
+    public void applyTo()
+    {
+        Flare flare = new Flare(main);
+        main.clip.add(flare);
     }
 
     //returns width

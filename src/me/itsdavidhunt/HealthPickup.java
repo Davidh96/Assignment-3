@@ -2,7 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
-public class HealthPickup extends GameObject {
+public class HealthPickup extends GameObject implements PickUp {
 
     private float hWidth;
 
@@ -30,11 +30,16 @@ public class HealthPickup extends GameObject {
                 //if touching/in player
                 Player temp=(Player)main.objects.get(i);
                 if (pos.y <= temp.pos.y && pos.y + (hWidth / 4) > temp.pos.y && pos.x <= temp.pos.x + temp.getWidth() && pos.x + hWidth >= temp.pos.x) {
-                    temp.lives++;
+                    applyTo();
                     main.objects.remove(this);
                 }
             }
         }
+    }
+
+    public void applyTo()
+    {
+        main.player.lives++;
     }
 
     //returns width
