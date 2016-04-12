@@ -39,6 +39,7 @@ public class Player extends GameObject {
 			lives--;
 		}
 
+
 	}
 
 	//controls the players movements

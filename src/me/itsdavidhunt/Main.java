@@ -22,6 +22,7 @@ public class Main extends PApplet {
     public boolean playGame=false;
     public boolean endGame=false;
     public boolean finalRound=false;
+    public boolean win;
 
     public static void main(String[] args) {
         String[] a = {"MAIN"};
@@ -50,8 +51,9 @@ public class Main extends PApplet {
 
     public void draw() {
     	background(0);
+        //println(win);
 
-        if(!playGame && endGame==false ) {
+        if(playGame==false && endGame==false ) {
             menu.display();
             menu.interact();
         }
@@ -63,7 +65,6 @@ public class Main extends PApplet {
             world.retry();
             menu.endScreen();
             menu.interact();
-
         }
 
     }    
@@ -87,19 +88,19 @@ public class Main extends PApplet {
 
             world.generate();
 
-            /*//render enemies
-            for (int i = 0; i < objects.size(); i++) {
-                if((objects.get(i) instanceof Enemy))
-                {
-                    objects.get(i).render();
+            if(finalRound==false) {
+                //render enemies
+                for (int i = 0; i < objects.size(); i++) {
+                    if ((objects.get(i) instanceof Enemy)) {
+                        objects.get(i).render();
+                    }
                 }
-            }*/
+            }
 
             player.flareAim();
         }
         if(world.level>4)
         {
-            println(world.level);
             finalRound=true;
         }
         //load final level
@@ -110,6 +111,7 @@ public class Main extends PApplet {
         //displays end screen
         if(player.lives<1)
         {
+            win=false;
             endGame=true;
             playGame=false;
         }

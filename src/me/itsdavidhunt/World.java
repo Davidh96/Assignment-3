@@ -206,30 +206,7 @@ public class World {
         //if the world needs to be reset(due to player progressing to new level)
         if(resetWorld)
         {
-            //remove all blocks
-            for(int i=0;i<main.blArray.size();i++)
-            {
-                main.blArray.remove(i);
-            }
-            //remove all objects(player,flares,enemies etc..)
-            for(int i=0;i<main.objects.size();i++)
-            {
-                main.objects.remove(i);
-            }
-
-            //remove all flares collected by player
-            for(int i=0;i<main.clip.size();i++)
-            {
-                main.clip.remove(i);
-            }
-
-            //once all has been removed
-            if(main.blArray.size()<1 && main.objects.size()<1)
-            {
-                //create new world
-                createWorld=true;
-                resetWorld=false;
-            }
+            reset();
         }
 
     }
@@ -238,7 +215,6 @@ public class World {
     public void finalLevel()
     {
         level=1;
-        //main.println("heyo");
 
         if(initial) {
             for (int i = 0; i < 3; i++) {
@@ -265,14 +241,17 @@ public class World {
 
     }
 
-    //if the player wants to replay
     public void retry()
     {
         //initialise the level and health
         level=1;
         main.player.lives=3;
-        //create a new world
+        reset();
+    }
 
+    //if the player wants to replay
+    private void reset()
+    {
         //remove all blocks
         for(int i=0;i<main.blArray.size();i++)
         {
@@ -291,7 +270,7 @@ public class World {
         }
 
         //once all has been removed
-        if(main.blArray.size()<1 && main.objects.size()<1)
+        if(main.blArray.size()<1 && main.objects.size()<1 )
         {
             //create new world
             createWorld=true;

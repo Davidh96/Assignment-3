@@ -1,7 +1,6 @@
 package me.itsdavidhunt;
 
 import processing.core.*;
-import java.util.ArrayList;
 
 public class Menu {
 
@@ -40,8 +39,15 @@ public class Menu {
         //title
         main.fill(255);
         main.textAlign(main.CENTER, main.CENTER);
-        main.textSize((float) (main.width * .25));
-        main.text("FIN", main.width / 2, main.height / 4);
+        main.textSize((float) (main.width * .1));
+
+        if(main.win) {
+            main.text("YOU WON", main.width / 2, main.height / 4);
+        }
+        else {
+            main.text("YOU FAILED", main.width / 2, main.height / 4);
+        }
+
 
         //play putton
         main.fill(color);
@@ -73,6 +79,7 @@ public class Menu {
                 main.finalRound=false;
                 main.world.initial=true;
                 main.playGame=true;
+                main.win=true;
 
             }
         }
