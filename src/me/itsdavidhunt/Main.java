@@ -74,7 +74,6 @@ public class Main extends PApplet {
     {
         if(world.level<5 && player.lives>0) {
             player.move();
-            HUD.display();
 
             //renders all game objects that are not enemies
             for (int i = 0; i < objects.size(); i++) {
@@ -116,6 +115,7 @@ public class Main extends PApplet {
             playGame=false;
         }
 
+        HUD.display();
 
     }
 

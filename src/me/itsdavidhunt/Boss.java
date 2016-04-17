@@ -42,6 +42,7 @@ public class Boss {
 
         detect();
         shoot();
+        movement();
     }
 
     //moves boss
@@ -86,7 +87,7 @@ public class Boss {
             //give random x position for the boss head to go to
             int xPos=(int)main.random(sectorW*(headNum-1),sectorW*headNum);
             //give random y position for the boss head to go to
-            int yPos=(int)main.random((float)(main.height*.1),(float)(main.height*.5));
+            int yPos=(int)main.random((float)(main.height*.3),(float)(main.height*.5));
             goPos=new PVector(xPos,yPos);
             moved=false;
         }

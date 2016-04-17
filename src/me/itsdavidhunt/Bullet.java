@@ -22,9 +22,6 @@ public class Bullet {
 
     //renders bullet on screen
     public void render() {
-        main.fill(255,0,0);
-        main.stroke(255,0,0);
-        //main.rect(pos.x, pos.y, bWidth, bWidth);
 
         main.image(img,pos.x,pos.y,bWidth,bWidth);
 
@@ -44,25 +41,29 @@ public class Bullet {
     //detects if touching player
     public void detect()
     {
-        for(int i=0;i<main.objects.size();i++)
+        /*System.out.println("1");
+        //if x position is same as players
+        if((pos.x<main.player.pos.x && pos.x+getWidth()>main.player.pos.x) || (pos.x+getWidth()>main.player.pos.x && pos.x+getWidth()<main.player.pos.x+main.player.getWidth()))
         {
-            //if player
-            if(main.objects.get(i) instanceof Player)
+            System.out.println("2");
+            //if y position is same a players
+            if(pos.y>main.player.pos.y-main.player.getHeight() && pos.y+getWidth()<main.player.pos.y)
             {
-                Player temp=(Player)main.objects.get(i);
-
-                //if x position is same as players
-                if((pos.x<temp.pos.x && pos.x+getWidth()>temp.pos.x) || (pos.x+getWidth()>temp.pos.x && pos.x+getWidth()<temp.pos.x+temp.getWidth()))
-                {
-                    //if y position is same a players
-                    if(pos.y>temp.pos.y-temp.getHeight() && pos.y+getWidth()<temp.pos.y)
-                    {
-                        //take away life
-                        temp.lives--;
-                        main.bulletArray.remove(this);
-                    }
-                }
+                System.out.println("3");
+                //take away life
+                main.player.lives--;
+                main.bulletArray.remove(this);
             }
+        }*/
+
+        float dist = PVector.dist(pos, main.player.pos);
+        //if bullet in player
+        if(dist<bWidth)
+        {
+            //take away a life
+            main.player.lives--;
+            //destroy itself
+            main.bulletArray.remove(this);
         }
     }
 

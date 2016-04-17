@@ -13,8 +13,8 @@ public class HealthPickup extends GameObject implements PickUp {
 
     //displays pickup on screen
     public void render() {
-        main.fill(0,0,255);
-        main.stroke(0,255,255);
+        main.fill(0,255,0);
+        main.stroke(0,255,0);
         main.rect(pos.x,pos.y,hWidth,-hWidth);
 
         addGravity(this);
@@ -24,16 +24,9 @@ public class HealthPickup extends GameObject implements PickUp {
     //detects if a player has walked over the pickup
     private void detect()
     {
-        for(int i=0;i<main.objects.size();i++)
-        {
-            if(main.objects.get(i) instanceof Player) {
-                //if touching/in player
-                Player temp=(Player)main.objects.get(i);
-                if (pos.y <= temp.pos.y && pos.y + (hWidth / 4) > temp.pos.y && pos.x <= temp.pos.x + temp.getWidth() && pos.x + hWidth >= temp.pos.x) {
-                    applyTo();
-                    main.objects.remove(this);
-                }
-            }
+        if (pos.y <= main.player.pos.y && pos.y + (hWidth / 4) > main.player.pos.y && pos.x <= main.player.pos.x + main.player.getWidth() && pos.x + hWidth >= main.player.pos.x) {
+            applyTo();
+            main.objects.remove(this);
         }
     }
 

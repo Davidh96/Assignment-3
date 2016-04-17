@@ -33,11 +33,11 @@ public class Flare extends GameObject{
     //renders the flare
     public void render()
     {
-        main.fill(0,255,0);
-        main.stroke(0,255,0);
+        main.fill(0,0,255);
+        main.stroke(0,0,255);
         main.rect(pos.x,pos.y,fWidth,-fWidth);
-        main.fill(0,255,0,100);
-        main.stroke(0,255,0,100);
+        main.fill(0,0,255,100);
+        main.stroke(0,0,255,100);
 
         //makes the flare look like its flickering
         if(grow)

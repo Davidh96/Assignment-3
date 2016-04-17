@@ -14,8 +14,8 @@ public class FlarePickup extends GameObject {
 
     //displays pickup on screen
     public void render() {
-        main.fill(0,255,0);
-        main.stroke(0,255,0);
+        main.fill(0,0,255);
+        main.stroke(0,0,255);
         main.rect(pos.x,pos.y,fWidth,-fWidth);
 
         addGravity(this);
@@ -25,15 +25,10 @@ public class FlarePickup extends GameObject {
     //detects if a player has walked over the pickup
     private void detect()
     {
-        for(int i=0;i<main.objects.size();i++)
-        {
-            if(main.objects.get(i) instanceof Player) {
-                //if touching/in player
-                if (pos.y <= main.objects.get(i).pos.y && pos.y + (fWidth / 4) > main.objects.get(i).pos.y && pos.x <= main.objects.get(i).pos.x + main.objects.get(i).getWidth() && pos.x + fWidth >= main.objects.get(i).pos.x) {
-                    applyTo();
-                    main.objects.remove(this);
-                }
-            }
+        //if touching/in player
+        if (pos.y <= main.player.pos.y && pos.y + (fWidth / 4) > main.player.pos.y && pos.x <= main.player.pos.x + main.player.getWidth() && pos.x + fWidth >= main.player.pos.x) {
+            applyTo();
+            main.objects.remove(this);
         }
     }
 

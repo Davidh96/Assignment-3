@@ -17,6 +17,7 @@ public class Menu {
     public void display() {
         //title
         main.fill(255);
+        main.stroke(255);
         main.textAlign(main.CENTER, main.CENTER);
         main.textSize((float) (main.width * .25));
         main.text("FLARE", main.width / 2, main.height / 4);
@@ -51,6 +52,7 @@ public class Menu {
 
         //play putton
         main.fill(color);
+        main.stroke(255);
         main.rect(0, main.height / 2, main.width, main.width / 8);
         main.fill(0);
         main.textSize((float) (main.width * .05));

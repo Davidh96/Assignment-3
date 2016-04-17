@@ -234,7 +234,6 @@ public class World {
 
         for (int i = 0; i < main.heads.size(); i++) {
             main.heads.get(i).render();
-            //main.heads.get(i).movement();
         }
 
 
