@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Flare:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Flare_jar</output-path>
+    <root id="archive" name="Flare.jar">
+      <element id="module-output" name="Flare" />
+      <element id="extracted-dir" path="C:/processing-3.0.1/core/library/core.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -73,6 +73,9 @@ public class Main extends PApplet {
     public void play()
     {
         if(world.level<5 && player.lives>0) {
+
+            fill(random(0,255),random(0,255),random(0,255));
+            text("Fuck",250,250);
             player.move();
 
             //renders all game objects that are not enemies
@@ -85,7 +88,7 @@ public class Main extends PApplet {
 
             player.flareGunSetup();
 
-            world.generate();
+            //world.generate();
 
             if(finalRound==false) {
                 //render enemies
@@ -98,7 +101,7 @@ public class Main extends PApplet {
 
             player.flareAim();
         }
-        if(world.level>4)
+        /*if(world.level>4)
         {
             finalRound=true;
         }
@@ -115,7 +118,7 @@ public class Main extends PApplet {
             playGame=false;
         }
 
-        HUD.display();
+        HUD.display();*/
 
     }
 
