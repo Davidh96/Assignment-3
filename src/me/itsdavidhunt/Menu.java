@@ -2,7 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
-public class Menu {
+public class Menu extends PApplet {
 
     Main main;
 

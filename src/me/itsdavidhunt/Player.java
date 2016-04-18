@@ -4,14 +4,13 @@ import processing.core.*;
 
 public class Player extends GameObject {
 
-	private PVector movement;
-	public PVector spawnPos;
-	private float plHeight;
-	private float plWidth;
-	private float jSpeed=(float).006;
-	public int lives=3;
+	 PVector movement;
+ PVector spawnPos;
+ float plHeight;
+ float plWidth;
+ float jSpeed=(float).006;
+ int lives=3;
 	private PImage img;
-
 	//creates player
 	public Player(Main _main)
 	{
@@ -19,8 +18,8 @@ public class Player extends GameObject {
 		plHeight= (float)(main.height*.06);
 		plWidth= (float)(main.width*.03);
 		pos=new PVector(main.width/2,main.height/2-plHeight);
+		img=main.loadImage("PlayerRight.png");
 		movement=new PVector(5,0);
-		img= main.loadImage("playerRight.png");
 
 	}
 
@@ -28,9 +27,7 @@ public class Player extends GameObject {
 	public void render()
 	{
 		//render image
-		main.image(img, pos.x, pos.y,plWidth,-plHeight);
-
-		addGravity(this);
+		main.image(img, pos.x, pos.y, plWidth, -plHeight);
 
 		//if player falls off screen
 		if(pos.y-getHeight()>main.height)
@@ -50,7 +47,7 @@ public class Player extends GameObject {
 			//if player wants to go right
 			if(main.key=='d')
 			{
-				img= main.loadImage("playerRight.png");
+				img=main.loadImage("PlayerRight.png");
 				//switch the side the flare gun appears on
 				main.gun.img=main.loadImage("GunRight.png");
 				main.gun.switchSide=0;
@@ -60,7 +57,7 @@ public class Player extends GameObject {
 			//if player wants to go left
 			if(main.key=='a')
 			{
-				img= main.loadImage("playerLeft.png");
+				img=main.loadImage("PlayerLeft.png");
 				//switch the side the flare gun appears on
 				main.gun.img=main.loadImage("GunLeft.png");
 				main.gun.switchSide=-getWidth()/2;
