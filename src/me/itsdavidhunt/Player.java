@@ -36,6 +36,14 @@ public class Player extends GameObject {
 			lives--;
 		}
 
+		//allow player to move
+		move();
+
+		//object is now affected by gravity
+		addGravity();
+
+		//display gun
+		flareGunSetup();
 
 	}
 

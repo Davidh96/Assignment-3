@@ -16,9 +16,9 @@ public abstract class GameObject extends PApplet {
     }
 
     //causes object to be affected by gravity
-    public void addGravity(GameObject obj)
+    public void addGravity()
     {
-        Gravity.pushDown(obj,main);
+        Gravity.pushDown(this,main);
         //ensures that all objects are affected by gravity
         inAir=true;
     }

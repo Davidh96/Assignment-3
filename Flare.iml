@@ -23,5 +23,21 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Processing/libraries/minim/library/jl1.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Processing/libraries/minim/library/jsminim.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Processing/libraries/minim/library/minim.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Processing/libraries/minim/library/mp3spi1.9.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Processing/libraries/minim/library/tritonus_aos.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Processing/libraries/minim/library/tritonus_share.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../../Processing/libraries/minim/library/jl1.0.1.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -214,8 +214,10 @@ public class World {
     //creates final level
     public void finalLevel()
     {
+        //sets the level to look like level 1
         level=1;
 
+        //initial create of heads
         if(initial) {
             for (int i = 0; i < 3; i++) {
                 Boss head = new Boss(main, i + 1);
@@ -224,14 +226,15 @@ public class World {
             initial=false;
         }
 
+        //if heads have been destroyed
         if(main.heads.size()==0)
         {
             main.endGame=true;
-
             main.finalRound=false;
             main.playGame=false;
         }
 
+        //display heads
         for (int i = 0; i < main.heads.size(); i++) {
             main.heads.get(i).render();
         }
@@ -260,6 +263,11 @@ public class World {
         for(int i=0;i<main.objects.size();i++)
         {
             main.objects.remove(i);
+        }
+
+        for(int i=0;i<main.clip.size();i++)
+        {
+            main.clip.remove(i);
         }
 
         //once all has been removed

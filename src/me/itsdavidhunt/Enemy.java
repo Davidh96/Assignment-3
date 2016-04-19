@@ -31,9 +31,9 @@ public class Enemy extends GameObject{
             patrol();
         }
 
+        //object is now affected by gravity
+        addGravity();
         detect();
-        addGravity(this);
-
     }
 
     //controls the movement of an enemy

@@ -17,7 +17,8 @@ public class HealthPickup extends GameObject implements PickUp {
         main.stroke(0,255,0);
         main.rect(pos.x,pos.y,hWidth,-hWidth);
 
-        addGravity(this);
+        //object is now affected by gravity
+        addGravity();
         detect();
     }
 

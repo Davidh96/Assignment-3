@@ -68,18 +68,15 @@ public class Flare extends GameObject{
 
         main.ellipse(pos.x+(float)fWidth/2,pos.y+(float)(-fWidth)/2,fWidth*10-radius,fWidth*10-radius);
 
-
         move();
-        addGravity(this);
-
-
-
+        addGravity();
     }
 
     //controls the flares movement
     public void move()
     {
         if(inAir==true) {
+
             //if going right
             if (goToPos.x > pDest.x) {
                 goRight = true;

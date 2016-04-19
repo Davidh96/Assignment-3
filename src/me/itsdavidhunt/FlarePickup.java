@@ -18,7 +18,8 @@ public class FlarePickup extends GameObject {
         main.stroke(0,0,255);
         main.rect(pos.x,pos.y,fWidth,-fWidth);
 
-        addGravity(this);
+        //object is now affected by gravity
+        addGravity();
         detect();
     }
 

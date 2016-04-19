@@ -23,18 +23,23 @@ public class Block extends GameObject {
 
     }
 
-    //detects if their is an object from ojbects. This will cause an objects to stop falling
+    //detects if their is an object from objects. This will cause an objects to stop falling
     public void detect()
     {
         for(int i=0;i<main.objects.size();i++)
         {
 
-            //if the object is on top of the block
-            if(pos.y<=main.objects.get(i).pos.y && pos.y+(blHeight/4)>main.objects.get(i).pos.y && pos.x<=main.objects.get(i).pos.x+main.objects.get(i).getWidth() && pos.x+blWidth>=main.objects.get(i).pos.x)
+            //if the object is above the block
+            if(pos.y<=main.objects.get(i).pos.y && pos.y+(blHeight/4)>main.objects.get(i).pos.y)
             {
-                main.objects.get(i).inAir=false;
-                main.objects.get(i).pos.y=pos.y;
+                //if the object is on top of the block
+                if(pos.x<=main.objects.get(i).pos.x+main.objects.get(i).getWidth() && pos.x+blWidth>=main.objects.get(i).pos.x) {
+                    main.objects.get(i).inAir = false;
+                    main.objects.get(i).pos.y = pos.y;
+                }
             }
+
+            //if player
             if(main.objects.get(i) instanceof Player) {
                 //prevents players form going through blocks from the right side
                 if ((pos.x + getWidth() > main.objects.get(i).pos.x && pos.x + getWidth() - main.objects.get(i).getWidth() < main.objects.get(i).pos.x) && ((pos.y < main.objects.get(i).pos.y && pos.y + getHeight() > main.objects.get(i).pos.y) || (pos.y < main.objects.get(i).pos.y - main.objects.get(i).getHeight() && pos.y + getHeight() > main.objects.get(i).pos.y - main.objects.get(i).getHeight()))) {

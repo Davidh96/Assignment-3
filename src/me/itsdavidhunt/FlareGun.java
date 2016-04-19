@@ -20,9 +20,7 @@ public class FlareGun extends GameObject {
     {
         main.fill(255,0,0);
         pos=new PVector(main.player.pos.x+main.player.getWidth()/2+switchSide,main.player.pos.y+main.player.getWidth()/2);
-        //main.rect(pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
         main.image(img,pos.x,pos.y-fgWidth,fgWidth,-fgWidth);
-
 
         if(main.mousePressed)
         {
@@ -33,9 +31,11 @@ public class FlareGun extends GameObject {
     //controls the firing of flares
     public void shoot()
     {
-        if(main.clip.size()>0) {
+        if(main.clip.size()>0 && main.timer>60) {
             //prevents multiple flares being fired at once
             if (main.fired) {
+                main.flareSound.play();
+                main.flareSound.rewind();
                 main.objects.add(main.clip.get(0));
                 //spawn at player position
                 main.clip.get(0).pos= new PVector(main.gun.pos.x,main.player.pos.y-main.player.getHeight());

@@ -6,6 +6,10 @@ public class Gravity extends PApplet {
 
     private static Main main;
 
+    private static float initSpeed=(float).001;
+    private static float terminalVelocity=(float)0.012;
+    private static float incSpeed=(float).03;
+
     //forces object downwards
     public static void pushDown(GameObject obj, Main _main)
     {
@@ -15,16 +19,16 @@ public class Gravity extends PApplet {
         if(obj.inAir) {
             obj.pos.y +=main.height*obj.speed ;
 
-            if(obj.speed<.012) {
-                //the flare drops faster the longer it is in the air
-                obj.speed += (obj.speed * .03);
+            if(obj.speed<terminalVelocity) {
+                //the object drops faster the longer it is in the air
+                obj.speed += (obj.speed * incSpeed);
             }
         }
         //if the object is not in the air
         if(!obj.inAir)
         {
             //reset drop speed
-            obj.speed=(float).001;
+            obj.speed=initSpeed;
         }
 
     }
