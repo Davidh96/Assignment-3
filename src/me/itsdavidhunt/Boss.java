@@ -22,7 +22,7 @@ public class Boss {
         sectorW=main.width/3;
         float randHeight=main.height/2;
         this.headNum=headNum;
-        pos=new PVector((sectorW*headNum)-sectorW/2,randHeight);
+        pos=new PVector((int)((sectorW*headNum)-sectorW/2),(int)(randHeight));
         bWidth=(float)(main.width*.08);
         img=main.loadImage("Boss.png");
 

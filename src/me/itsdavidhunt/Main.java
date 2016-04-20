@@ -109,7 +109,7 @@ public class Main extends PApplet {
 
             //create and display world
             world.generate();
-
+/*
             if(finalRound==false) {
                 //render enemies
                 for (int i = 0; i < objects.size(); i++) {
@@ -117,7 +117,7 @@ public class Main extends PApplet {
                         objects.get(i).render();
                     }
                 }
-            }
+            }*/
 
             //show flare gun aimer
             player.flareAim();
