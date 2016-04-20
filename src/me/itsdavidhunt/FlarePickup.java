@@ -2,7 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
-//Enemies will need to be dodged by the user
+//need to be pick upped to fire flres
 public class FlarePickup extends GameObject {
 
     private float fWidth;

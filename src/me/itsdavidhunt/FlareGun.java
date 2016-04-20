@@ -2,7 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
-
+//holds the flares
 public class FlareGun extends GameObject {
 
     private float fgWidth= (float)(main.height*.03);

@@ -41,7 +41,7 @@ public class Enemy extends GameObject{
     {
         for(int i=0;i<main.blArray.size();i++) {
 
-            //if player is on block
+            //if enemy is on block
             if(main.blArray.get(i).pos.x<pos.x+getWidth() && main.blArray.get(i).pos.x+main.blArray.get(i).getWidth()>pos.x ) {
                 //if the current position of enemy is greater than the left edge of the block and they have reached the right end of the block
                 if (pos.x >= main.blArray.get(i).pos.x && goLeft) {

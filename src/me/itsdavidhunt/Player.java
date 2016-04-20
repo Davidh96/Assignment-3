@@ -2,6 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
+//player is what the user controls
 public class Player extends GameObject {
 
 	 PVector movement;

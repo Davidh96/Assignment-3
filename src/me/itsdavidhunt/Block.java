@@ -1,5 +1,6 @@
 package me.itsdavidhunt;
 
+//the blocks are the platforms the player,enemies walk on
 public class Block extends GameObject {
 
     private float blWidth;

@@ -7,32 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="316f04a2-8779-413e-b553-0e0cb5768353" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Block.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Block.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Enemy.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Enemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Flare.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Flare.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/FlareGun.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/FlareGun.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/FlarePickup.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/FlarePickup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/GameObject.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/GameObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Gravity.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Gravity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/HealthPickup.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/HealthPickup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Main.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Menu.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/Player.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/me/itsdavidhunt/World.class" afterPath="$PROJECT_DIR$/bin/me/itsdavidhunt/World.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Flare_jar/Flare.jar" afterPath="$PROJECT_DIR$/out/artifacts/Flare_jar/Flare.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Flare_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Flare_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flare.iml" afterPath="$PROJECT_DIR$/Flare.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Block.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Block.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Bullet.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Bullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Exit.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Exit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/GameObject.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/GameObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Main.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Menu.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/PickUp.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/PickUp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/Player.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/World.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/itsdavidhunt/playerHUD.java" afterPath="$PROJECT_DIR$/src/me/itsdavidhunt/playerHUD.java" />
     </list>
     <ignored path="Assignment-3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,23 +50,60 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+            <state relative-caret-position="348">
+              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#439#451#0" expanded="true" />
-                <element signature="e#3553#3554#0" expanded="true" />
-                <element signature="e#3585#3586#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlareGun.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java">
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+            <state relative-caret-position="238">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PickUp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/PickUp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerHUD.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/playerHUD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,38 +122,28 @@
       <file leaf-file-name="Gravity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="68">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
+      <file leaf-file-name="HealthPickup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="68">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Flare.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
+      <file leaf-file-name="FlarePickup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Block.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+            <state relative-caret-position="68">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -144,16 +164,21 @@
       <list>
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Menu.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/World.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Player.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Block.java" />
-        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Main.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Block.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Exit.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java" />
         <option value="$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/PickUp.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/Player.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/playerHUD.java" />
+        <option value="$PROJECT_DIR$/src/me/itsdavidhunt/World.java" />
       </list>
     </option>
   </component>
@@ -188,9 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,11 +265,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Processing/libraries/minim/library/tritonus_share.jar!/" />
   </component>
@@ -599,7 +624,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -607,15 +634,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#439#451#0" expanded="true" />
-            <element signature="e#3553#3554#0" expanded="true" />
-            <element signature="e#3585#3586#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -650,9 +780,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#439#451#0" expanded="true" />
-            <element signature="e#3553#3554#0" expanded="true" />
-            <element signature="e#3585#3586#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -735,9 +862,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#439#451#0" expanded="true" />
-            <element signature="e#3553#3554#0" expanded="true" />
-            <element signature="e#3585#3586#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,57 +912,70 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#439#451#0" expanded="true" />
-            <element signature="e#3553#3554#0" expanded="true" />
-            <element signature="e#3585#3586#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="34">
+          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/World.java">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Boss.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3655">
-          <caret line="216" column="45" selection-start-line="216" selection-start-column="45" selection-end-line="216" selection-end-column="45" />
+        <state relative-caret-position="65">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Bullet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        <state relative-caret-position="-196">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="731">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Exit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="51">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlarePickup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -853,45 +990,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Gravity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="68">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Block.java">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/HealthPickup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Flare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+        <state relative-caret-position="68">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+        <state relative-caret-position="348">
+          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#439#451#0" expanded="true" />
-            <element signature="e#3553#3554#0" expanded="true" />
-            <element signature="e#3585#3586#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/FlareGun.java">
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+        <state relative-caret-position="238">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/PickUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/playerHUD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/itsdavidhunt/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

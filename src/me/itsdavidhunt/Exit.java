@@ -2,7 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 import java.util.ArrayList;
-
+//used to progress to next level
 public class Exit {
 
     Main main;

@@ -2,6 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
+//are used to light up areas of the world
 public class Flare extends GameObject{
 
 

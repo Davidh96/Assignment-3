@@ -1,8 +1,9 @@
 package me.itsdavidhunt;
 
 import processing.core.*;
-import java.util.ArrayList;
 
+
+//controls the creation and recreation of each level
 public class World {
 
     Main main;

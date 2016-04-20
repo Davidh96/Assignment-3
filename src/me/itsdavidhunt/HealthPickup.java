@@ -2,6 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
+//need to be picked up to get extra lives
 public class HealthPickup extends GameObject implements PickUp {
 
     private float hWidth;

@@ -1,8 +1,8 @@
 package me.itsdavidhunt;
 
 import processing.core.*;
-import java.util.ArrayList;
 
+//are boss heads that attack the player
 public class Boss {
 
     Main main;

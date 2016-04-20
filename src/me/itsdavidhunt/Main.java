@@ -43,8 +43,8 @@ public class Main extends PApplet {
     }
 
     public void settings(){
-    //fullScreen();
-    size(800,500);
+    fullScreen();
+    //size(800,500);
     }
     
     public void setup()
@@ -60,10 +60,13 @@ public class Main extends PApplet {
         gun=new FlareGun(this);
 
         minim = new Minim(this);
+        //load main song
         theme = minim.loadFile("main.wav", 2048);
         theme.setGain(-20);
+        //load flare sound
         flareSound = minim.loadFile("flare.wav", 2048);
         theme.setGain(-30);
+        //loop main song
         theme.loop();
     }
     

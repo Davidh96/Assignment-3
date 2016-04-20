@@ -2,6 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
+//displays lives,flares,levels,time
 public class playerHUD {
 
 	Main main;
@@ -23,5 +24,7 @@ public class playerHUD {
 		main.text("Lives: " + main.player.lives,(float)(main.width*.01),(float)(main.height*.05));
 		//displays current flares
 		main.text("Flares: " + main.clip.size(),(float)(main.width*.01),(float)(main.height*.075));
+		//displays time played
+		main.text("Time: " + main.timer/60 + " secs",(float)(main.width*.01),(float)(main.height*.1));
 	}
 }

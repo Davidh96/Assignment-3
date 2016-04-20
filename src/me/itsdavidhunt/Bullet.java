@@ -2,6 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
+//are the projectiles that are fired at the player
 public class Bullet {
 
     Main main;
@@ -41,21 +42,7 @@ public class Bullet {
     //detects if touching player
     public void detect()
     {
-        /*System.out.println("1");
-        //if x position is same as players
-        if((pos.x<main.player.pos.x && pos.x+getWidth()>main.player.pos.x) || (pos.x+getWidth()>main.player.pos.x && pos.x+getWidth()<main.player.pos.x+main.player.getWidth()))
-        {
-            System.out.println("2");
-            //if y position is same a players
-            if(pos.y>main.player.pos.y-main.player.getHeight() && pos.y+getWidth()<main.player.pos.y)
-            {
-                System.out.println("3");
-                //take away life
-                main.player.lives--;
-                main.bulletArray.remove(this);
-            }
-        }*/
-
+        //get the distance of bullet from the player
         float dist = PVector.dist(pos, main.player.pos);
         //if bullet in player
         if(dist<bWidth)

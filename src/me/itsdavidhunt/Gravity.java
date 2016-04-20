@@ -2,6 +2,7 @@ package me.itsdavidhunt;
 
 import processing.core.*;
 
+//controls how gravity affects objects
 public class Gravity extends PApplet {
 
     private static Main main;

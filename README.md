@@ -10,3 +10,6 @@ w - jump
 a - move left
 d - move right
 left click - fire flare
+
+#Download Full Game
+www.itsdavidhunt.me
